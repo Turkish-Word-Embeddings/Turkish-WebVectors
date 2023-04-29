@@ -1,0 +1,169 @@
+<!-- This template extends the base.html template. -->
+{%- extends "base.html" -%}
+<!-- The "block title" tag changes the title in the browser tab and the header on the page. -->
+{%- block title -%}
+<title>{{strings['base3']}}: {{strings['contextual1']}}</title>
+{%- endblock title -%}
+<!-- webpage content -->
+{%- block content %}
+<div class="row">
+  <div class="col-md-10">
+    <h2>{{strings['contextual1']}}</h2>
+    <!-- Request field -->
+    <div id="queryform">
+      <form id="inputform" action="#" method=post>
+        <div class="form-group">
+          <!-- Caption ("Enter a word..." ) -->
+          <p>{{strings['contextual2']}}</p>
+          <!-- If there was a request, it's shown in the field, else the default "computer_NOUN" is shown -->
+          {%- if results %}
+          <input type="text" id="query" name="input_sentence" value="{{ sentence }}" maxlength=100 size=100  style="max-width:100%;">
+          {%- else %}
+          <input type="text" id="query" name="input_sentence" value="{{strings['contextual3']}}" maxlength=100 size=100  style="max-width:100%;">
+          {% endif -%}
+          <input id="elmo_history" name="elmo_history" type="hidden" value="{% if results %} {{ str_elmo_history }} {% endif %}">
+        </div>
+        <div class="radio">
+        <p><em>{{strings['contextual13']}}</em></p>
+        {%- for m in elmo_models %}
+        <label>
+        <input type="radio" name="elmo_models" {%if m in model %}checked{% endif %} value="{{ m }}">{{ strings[elmo_models[m]] }}
+        </label>
+        {%- endfor %}
+      </div>
+        <div class="radio">
+        <p><em>{{strings['contextual9']}}</em></p>
+        {%- for m in all_layers %}
+        <label>
+        <input type="radio" name="elmo_layers" {%if m in user_layer %}checked{% endif %} value="{{ m }}">{{ strings[m] }}
+        </label>
+        {%- endfor %}
+      </div>
+        <!-- Button "Find similar words!" is placed in <form> to be able to send data to the server -->
+        <button type="submit" class="btn btn-primary" id="send" name="list_query">{{strings['contextual5']}}</button>
+      </form>
+
+    </div>
+    <!-- Featuring results -->
+    {% if results -%}
+    <h3>
+      <strong>
+        {{strings['contextual4']}}
+      </strong>
+    </h3>
+    <i>(<a title="{{strings['contextual14']}}" href="http://vectors.nlpl.eu/repository/latest/{{ model }}.zip">{{ strings[elmo_models[model]] }}</a>)</i>
+    <!-- Checkbox for frequency selection-->
+    <div class="checkbox" id="frequencyCheck">
+      <p><em>{{strings['frequency1']}}</em></p>
+      <label class="frequency-high" title="{{strings['frequency5']}}">
+      <input id="high" type="checkbox" checked>{{ strings['frequency2']}}</label>
+      <label class="frequency-mid" title="{{strings['frequency6']}}">
+      <input id="mid" type="checkbox" checked>{{ strings['frequency3'] }}</label>
+      <label class="frequency-low" title="{{strings['frequency7']}}">
+      <input id="low" type="checkbox">{{ strings['frequency4'] }}</label>
+    </div>
+    <!-- Featuring list of results -->
+    <div class="table-responsive">
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+      {% for word in header -%}
+          <th scope="col">
+            {% if (word[0]|length > 1) and (word[1] not in ['ADP', 'CCONJ', 'PRON', 'AUX', 'DET', 'SCONJ', 'PART'])%}
+          <h3><strong>
+            <a href="{{ url }}{{lang}}/{{ static_model }}/{{word[0]}}/"
+          title="{% if tags %}{{strings['synraw15']}} {{ word[1] }}, {% endif%}{{strings['synraw14']}} {{ frequencies[word[0]][0]}}" class="frequency-{{frequencies[word[0]][1]}}">{{ word[0] }}</a>
+          </strong></h3>
+          {%- else %}
+          <h3><i>{{ word[0] }}</i></h3>
+          {% endif -%}
+          </th>
+      {% endfor -%}
+          </tr>
+        </thead>
+        <tbody>
+          {%- for row in results %}
+            <tr>
+          {% for res in results[row] %}
+          {% if res[1] != 'None' %}
+          <td style="font-size: {{res[2]-}}px">
+              <a href="{{ url }}{{lang}}/{{ static_model }}/{{res[0]}}/" title="{{strings['synraw14']}} {{ frequencies[res[0]][0]}}" class="frequency-{{frequencies[res[0]][1]}}">
+                {{ res[0] }}
+              </a>
+        </td>
+        {% else %}
+        <td><i>{{ res[0] }}</i></td>
+        {% endif %}
+          {%- endfor -%}
+            </tr>
+          {%- endfor -%}
+      </tbody>
+      </table>
+    </div>
+    {% if elmo_hist|length > 1 -%}
+    <hr/>
+    <h3>{{strings['contextual10']}}</h3>
+      {% for el in elmo_hist[:-1]|reverse -%}
+      <h4><b>{{strings['contextual15']}}</b>: {{ strings[el[-1]]}}</h4>
+      <div class="table-responsive">
+      <table class="table table-borderless">
+	<thead>
+          <tr>
+      {% for word in el[0] -%}
+          <th scope="col">
+            {% if (word[0]|length > 1) and (word[1] not in ['ADP', 'CCONJ', 'PRON', 'AUX', 'DET', 'SCONJ', 'PART'])%}
+          <h3><strong>
+            <a href="{{ url }}{{lang}}/{{ static_model }}/{{word[0]}}/"
+          title="{% if tags %}{{strings['synraw15']}} {{ word[1] }}, {% endif%}">{{ word[0] }}</a>
+          </strong></h3>
+          {%- else %}
+          <h3><i>{{ word[0] }}</i></h3>
+          {% endif -%}
+          </th>
+      {% endfor -%}
+          </tr>
+        </thead>
+       <tbody>
+          {%- for row in el[1] %}
+            <tr>
+          {% for res in el[1][row] %}
+          {% if res != 'None' and res[1] != 'None'%}
+          <td style="font-size: {{res[2]-}}px">
+              <a href="{{ url }}{{lang}}/{{ static_model }}/{{res[0]}}/">
+                {{ res[0] }}
+              </a>
+        </td>
+        {% else %}
+        <td>{{ res[0] }}</td>
+        {% endif %}
+          {%- endfor -%}
+            </tr>
+          {%- endfor -%}
+      </tbody>
+      </table>
+      </div>
+      {%- endfor %}
+
+    {%- endif %}
+
+    {% endif -%}
+
+    {% if error %}
+
+    {% if "misconfiguration" in error %}
+        <p>{{strings['contextual0']}} </p>
+    {% else %}
+        <p>{{ error }}</p>
+    {% endif -%}
+
+    {% endif -%}
+
+    <p>{{strings['contextual6']}} </p>
+    <p>{{strings['contextual7']}} </p>
+    <p>{{strings['contextual8']}} </p>
+  </div>
+  <!-- class="col-md-10" ends -->
+</div>
+<!-- class="row" ends -->
+{%- endblock %}
+<!-- The content block is over. -->
