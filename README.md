@@ -43,7 +43,7 @@ fasttext_skipgram_300   FastText Skipgram   /home/ec2-user/Turkish-WebVectors/mo
 * Added `tr` to the `interface_languages` in `webvectors.cfg`. (It should be added to the front so that the language:text dictionary is created properly by `strings_reader.py`.)
 * A majority of the text present in the website is taken from `strings.csv`. Added the language `tr` and added Turkish versions of the texts.
 * Replaced `/data/` with `/home/ec2-user/Turkish-WebVectors/data/` in `run_syn.py`.
-* Added `turkish_vocab.json` and updated `prefetch` in `data/js/hint.js`.
+* Added `turkish_vocab.json`, updated `prefetch` in `data/js/hint.js` and `vocab` in `webvectors.cfg`.
 
 
 1. Kutuzov, Andrei & Kuzmenko, Elizaveta. (2017). WebVectors: A Toolkit for Building Web Interfaces for Vector Semantic Models. Communications in Computer and Information Science. 661. 155-161. 10.1007/978-3-319-52920-2_15. 
