@@ -1,183 +1,186 @@
-id,ru,en
-base1,WebVectors: семантические модели для русского языка,WebVectors: distributional semantic models online
-base2,Показать/скрыть меню,Toggle Navigation
-base3,WebVectors,WebVectors
-base4,О&nbsp;проекте,About
-base5,Калькулятор,Calculator
-base6,Похожие слова,Similar words
-base7,Модели,Models
-base8,Обучить свою модель,Train your model
-base9,Публикации,Publications
-base10,Контакты,Contacts
-base11,Команда WebVectors,WebVectors Team
-base12,Лицензия Creative Commons,Creative Commons License
-base13,Визуализации,Visualizations
-base14,Университет Осло, University of Oslo
-base15,Национальный Исследовательский Университет Высшая Школа Экономики,National Research University Higher School of Economics
-base16,Switch language,Сменить язык
-base17,Различные операции,Miscellaneous
-base18,"Слова, выделенные <span style='color: green;'>зеленым</span>, являются высокочастотными (доля в корпусе выше 0.00001); слова, выделенные <span style='color: red;'>красным</span>, являются низкочастотными (доля в корпусе ниже 0.0000005).","Words in <span style='color: green;'>green</span> are top frequent (corpus ratio higher than 0.00001); words in <span style='color: red;'>red</span>, are low frequent (corpus ratio less than 0.0000005)."
-base19,"Показаны только ассоциаты той же части речи, что и слово в запросе. Изменить этот фильтр можно на вкладке <a href=""/associates/"">Похожие слова</a>.","We show only the associates of the same part of speech as your query. All associates can be found at the <a href=""/associates/"">Similar Words</a> tab."
-base20,2D-текст,2D text
-calc1,Семантический калькулятор,Semantic Calculator
-calc2,Алгебраические операции,Algebraic operations
-calc3,"Введите в&nbsp;&laquo;<strong>положительную</strong>&raquo; и&nbsp;&laquo;<strong>отрицательную</strong>&raquo; формы не&nbsp;более 10&nbsp;слов через пробел. <i>WebVectors</i> сложит вектора положительных слов и&nbsp;вычтет из&nbsp;них отрицательные. Затем он&nbsp;выдаст слова, наиболее близкие к&nbsp;получившемуся вектору. Если вы&nbsp;оставите отрицательное поле пустым, <i>WebVectors</i> просто найдет центр лексического кластера, образованного положительными словами.","Enter not more than 10&nbsp;space-separated words into <strong>positive</strong> and <strong>negative</strong> forms. <i>WebVectors</i> will sum up&nbsp;vectors for the positive words and subtract vectors from the negative ones. Then it&nbsp;will output the word closest to&nbsp;the resulting vector. If&nbsp;you leave negative form empty, <i>WebVectors</i> will simply find the center of&nbsp;word cluster formed by&nbsp;your positive words."
+id,ru,en,tr
+base1,WebVectors: семантические модели для русского языка,WebVectors: distributional semantic models online,Turkish WebVectors: Çevrimici anlamsal sözcük temsilleri
+base2,Показать/скрыть меню,Toggle Navigation,Navigasyonu Aç/Kapat
+base3,WebVectors,WebVectors,WebVectors
+base4,О&nbsp;проекте,About,Hakkında
+base5,Калькулятор,Calculator,Hesap Makinesi
+base6,Похожие слова,Similar words,Benzer Kelimeler
+base7,Модели,Models,Modeller
+base8,Обучить свою модель,Train your model,Kendi modelini eğit
+base9,Публикации,Publications,Makaleler
+base10,Контакты,Contacts,İletişim
+base11,Команда WebVectors,WebVectors Team,WebVectors Takımı
+base12,Лицензия Creative Commons,Creative Commons License,Creative Commons Lisansı
+base13,Визуализации,Visualizations,Görselleştirme
+base14,Университет Осло, University of Oslo,Oslo Üniversitesi
+base15,Национальный Исследовательский Университет Высшая Школа Экономики,National Research University Higher School of Economics,Rusya Yüksek Ekonomi Okulu Ulusal Araştırma Üniversitesi
+base16,Switch language,Сменить язык,Dil değiştir
+base17,Различные операции,Miscellaneous,Ekstra
+base18,"Слова, выделенные <span style='color: green;'>зеленым</span>, являются высокочастотными (доля в корпусе выше 0.00001); слова, выделенные <span style='color: red;'>красным</span>, являются низкочастотными (доля в корпусе ниже 0.0000005).","Words in <span style='color: green;'>green</span> are top frequent (corpus ratio higher than 0.00001); words in <span style='color: red;'>red</span>, are low frequent (corpus ratio less than 0.0000005).","<span style='color: green;'>Yeşil</span> renkli kelimeler, en sık kullanılan kelimelerdir (Derlemde bulunma oranı 0.00001'den daha yüksektir); <span style='color: red;'>kırmızı</span> renkli kelimeler ise düşük sıklıkta kullanılan kelimelerdir (Derlemde bulunma oranı 0.0000005'ten daha azdır)."
+base19,"Показаны только ассоциаты той же части речи, что и слово в запросе. Изменить этот фильтр можно на вкладке <a href=""/associates/"">Похожие слова</a>.","We show only the associates of the same part of speech as your query. All associates can be found at the <a href=""/associates/"">Similar Words</a> tab.","Sadece sorgunuzla aynı kelime türüne sahip kelimelerin eş anlamlılarını gösteriyoruz. Tüm eş anlamlı kelimeler <a href=""/associates/"">Benzer Kelimeler</a> sekmesinde bulunabilir."
+base20,2D-текст,2D text,Bağlamsal Sözcük Temsilleri
+calc1,Семантический калькулятор,Semantic Calculator,Anlamsal Hesap Makinesi
+calc2,Алгебраические операции,Algebraic operations,Cebirsel İşlemler
+calc3,"Введите в&nbsp;&laquo;<strong>положительную</strong>&raquo; и&nbsp;&laquo;<strong>отрицательную</strong>&raquo; формы не&nbsp;более 10&nbsp;слов через пробел. <i>WebVectors</i> сложит вектора положительных слов и&nbsp;вычтет из&nbsp;них отрицательные. Затем он&nbsp;выдаст слова, наиболее близкие к&nbsp;получившемуся вектору. Если вы&nbsp;оставите отрицательное поле пустым, <i>WebVectors</i> просто найдет центр лексического кластера, образованного положительными словами.","Enter not more than 10&nbsp;space-separated words into <strong>positive</strong> and <strong>negative</strong> forms. <i>WebVectors</i> will sum up&nbsp;vectors for the positive words and subtract vectors from the negative ones. Then it&nbsp;will output the word closest to&nbsp;the resulting vector. If&nbsp;you leave negative form empty, <i>WebVectors</i> will simply find the center of&nbsp;word cluster formed by&nbsp;your positive words.","<strong>Pozitif</strong> ve <strong>negatif</strong> formlara en fazla 10 boşlukla ayrılmış kelime girebilirsiniz. <i>WebVectors</i>, pozitif kelimeler için vektörleri toplar ve negatif kelimelerden vektörleri çıkarır. Daha sonra, elde edilen vektöre en yakın kelimeyi çıktı olarak verir. Negatif formu boş bırakırsanız, <i>WebVectors</i>, sadece pozitif kelimelerinizin oluşturduğu kelime kümesinin merkezini bulacaktır."
 calc4,"Здесь&nbsp;можно вычислять отношения: например, &laquo;<strong>найти слово&nbsp;D, связанное со&nbsp;словом&nbsp;C таким&nbsp;же образом, как слово&nbsp;A связано со&nbsp;словом B</strong>&raquo;. Таким образом можно определять семантические связи между понятиями и решать задачи на аналогии. В&nbsp;форме ввода приведен пример: какое слово относится к&nbsp;слову <strong>&laquo;Лондон&raquo;</strong>, так&nbsp;же, как <strong>&laquo;Россия&raquo;</strong> относится к&nbsp;<strong>&laquo;Москве&raquo;</strong>? Ответ&nbsp;&#8212; &laquo;<strong>Великобритания</strong>&raquo;: Лондон столица Великобритании, а&nbsp;Москва&nbsp;&#8212; столица России. <a onclick =""javascript:ShowHide('HiddenDiv')"" href=""javascript:;"" >Подробнее...</a></p>
 <div class=""text"" id=""HiddenDiv"" style=""DISPLAY: none"" ><p><small>Можно сказать, что это вычитание компоненты &laquo;москва&raquo; из&nbsp;семантики слова &laquo;россия&raquo; и&nbsp;добавление компоненты &laquo;лондон&raquo;. Модель приходит к&nbsp;выводу, что &laquo;Россия для Лондона&nbsp;&#8212; это Великобритания&raquo; и&nbsp;выдает &laquo;Великобританию&raquo; в&nbsp;качестве ответа.</small></p>
-<p><small>К&nbsp;словам можно дописывать символ подчеркивания &laquo;_&raquo; и&nbsp;<a href=""http://universaldependencies.org/u/pos/all.html"" data-toggle=""tooltip"" data-placement=""top"" title=""NOUN, PROPN, VERB, ADJ..."">тэг части речи</a> (<i>&laquo;река_NOUN&raquo;</i>). В&nbsp;ином случае, <i>RusVectōrēs</i> определит часть речи автоматически.</small></p></div>","Calculate ratios, such as&nbsp;&laquo;<strong>find a&nbsp;word&nbsp;D related to&nbsp;the word&nbsp;C in&nbsp;the same way as&nbsp;the word&nbsp;A is&nbsp;related to&nbsp;the word B</strong>&raquo;. An&nbsp;example is&nbsp;given in&nbsp;the placeholder: which word is&nbsp;in&nbsp;the same relation to&nbsp;the word &laquo;<strong>Лондон</strong>&raquo; as&nbsp;&laquo;<strong>Россия</strong>&raquo; is&nbsp;to&nbsp;&laquo;<strong>Москва</strong>&raquo;? The answer is&nbsp;&laquo;<strong>Великобритания</strong>&raquo;: these concepts are in&nbsp;identical capital relations. <a onclick =""javascript:ShowHide('HiddenDiv')"" href=""javascript:;"" >More on this...</a></p>
-<div class=""text"" id=""HiddenDiv"" style=""DISPLAY: none"" ><p><small>You can also think of&nbsp;this operation as&nbsp;removing the &laquo;Москва&raquo; component from the semantics of&nbsp;&laquo;Россия&raquo; and augmenting it&nbsp;with &laquo;Лондон&raquo; component. The model inferences that it&nbsp;should change the&nbsp;country. Thus, it&nbsp;outputs &laquo;Великобритания&raquo; as&nbsp;an&nbsp;answer.</small></p></div>"
-calc5,"считает, что это будет:",thinks it&nbsp;will&nbsp;be:
-calc7,НКРЯ,Ruscorpora
-calc8,Русская Wikipedia,Russian Wikipedia
-calc9,НКРЯ и&nbsp;русская Wikipedia,Ruscorpora and Russian Wikipedia
-calc10,Веб-корпус,Web corpus
-calc11,Новостной корпус,News corpus
-calc13,computer linguistics,computer linguistics
-calc18,Вычислить!,Calculate!
-calc21,"Вы&nbsp;можете приписать к&nbsp;слову знак подчеркивания &laquo;_&raquo; и&nbsp;<a href=""http://universaldependencies.org/u/pos/all.html"" data-toggle=""tooltip"" data-placement=""top"" title=""NOUN, PROPN, VERB, ADJ..."">тэг части речи</a> (<i>&laquo;tea_NOUN&raquo;</i>). В&nbsp;ином случае <i>WebVectors</i> определит часть речи самостоятельно.","You can optionally end the words with an&nbsp;underscore and a&nbsp;<a href=""http://universaldependencies.org/u/pos/all.html"" data-toggle=""tooltip"" data-placement=""top"" title=""NOUN, PROPN, VERB, ADJ..."">PoS tag</a> (<i>&laquo;tea_NOUN&raquo;</i>). Otherwise, <i>WebVectors</i> will analyze words on&nbsp;its own."
-calc23,НКРЯ,Ruscorpora
-calc24,Русская Wikipedia,Russian Wikipedia
-calc25,НКРЯ и&nbsp;русская Википедия,Ruscorpora and Russian Wikipedia
-calc26,Веб-корпус,Web corpus
-calc27,Новостной корпус,News corpus
-calc31,Относится&nbsp;к,Relates&nbsp;to
-calc32,"Вы&nbsp;также можете попробовать более сложные операции над векторами, чем простое решение пропорции.","If&nbsp;you feel confident with algebraic operations on&nbsp;vectors, you can try something more sophisticated than simple analogical inference."
-calc33,mother,mother
-calc34,daughter,daughter
-calc35,father,father
-description1,"РусВекторес: дистрибутивная семантика для русского языка, веб-интерфейс и модели для скачивания","WebVectors: word embeddings, web interface and models to download"
-home0,"сервис, в котором вы можете исследовать семантические отношения между словами при помощи дистрибутивных моделей.","tool to explore semantic relations between words in distributional models."
-home1,WebVectors: семантические модели для русского языка,WebVectors: word embeddings online
-home2,"Введите слово, чтобы получить список из&nbsp;10&nbsp;его ближайших семантических ассоциатов (квази-синонимов):","Enter a&nbsp;word to&nbsp;produce a&nbsp;list of&nbsp;its 10&nbsp;nearest semantic associates:"
-home3,Найти похожие слова!,Find similar words!
-home4,Семантические ассоциаты для,Semantic associates for
-home5,вычисленные на&nbsp;модели,computed&nbsp;on
-home6,&#8217;You shall know a&nbsp;word by&nbsp;the company it&nbsp;keeps.&#8217; (Firth 1957).,&#8217;You shall know a&nbsp;word by&nbsp;the company it&nbsp;keeps.&#8217; (Firth 1957)
-home7,computer,computer
-home8,1 000 most frequent nouns in the English Wikipedia model,1 000 most frequent nouns in the English Wikipedia model
-home9,5 000 most frequent words in the English Wikipedia model, 5 000 most frequent words in the English Wikipedia model
-similar0,Araneum fastText,Araneum fastText
-similar1,Вычисление семантических ассоциатов,Computing associates
-similar2,"Введите слово, чтобы получить список из&nbsp;10&nbsp;его ближайших семантических аналогов (квази-синонимов). Вы&nbsp;можете приписать к&nbsp;слову знак подчеркивания &laquo;_&raquo; и&nbsp;<a href=""http://universaldependencies.org/u/pos/all.html"" data-toggle=""tooltip"" data-placement=""top"" title=""NOUN, PROPN, VERB, ADJ..."" target=""_blank"">тэг части речи</a> (<i>&laquo;tea_NOUN&raquo;</i>). Если вы&nbsp;этого не&nbsp;сделаете, <i>WebVectors</i> определит часть речи автоматически.","Enter a&nbsp;word to&nbsp;produce a&nbsp;list of&nbsp;its 10&nbsp;nearest semantic associates (quazy-synonyms). You can optionally end the word with an&nbsp;underscore and a&nbsp;<a href=""http://universaldependencies.org/u/pos/all.html"" data-toggle=""tooltip"" data-placement=""top"" title=""NOUN, PROPN, VERB, ADJ..."" target=""_blank"">PoS tag</a> (<i>&laquo;tea_NOUN&raquo;</i>). Otherwise, <i>WebVectors</i> will detect&nbsp;it."
-similar3,Выберите модель:,Choose the model:
-similar4,НКРЯ,Ruscorpora
-similar5,Английская Wikipedia,English Wikipedia
-similar6,Британский Национальный Корпус,British National Corpus
-similar7,Норвежский новостной корпус,Norsk Aviskorpus
-similar8,Английский Gigaword,English Gigaword
-similar9,Показывать только:,Show only:
-similar10,Существительные,Nouns
-similar11,Глаголы,Verbs
-similar12,Наречия,Adverbs
-similar13,Прилагательные,Adjectives
-similar14,Все части речи,All of&nbsp;them
-similar15,Найти похожие слова!,Find similar words!
-similar16,Cемантические ассоциаты для,Semantic associates for
-similar17,вычислено на&nbsp;модели,computed on&nbsp;data from
-similar18,Модели неизвестно слово,The model does not know the word
-similar19,Часть речи запроса,Query part of&nbsp;speech
-similar20,Имена собственные,Proper names
-similar21,Некорректный запрос,Incorrect query
-similar22,Некорректный тэг,Incorrect tag
-similar23,Нет подходящих результатов,No&nbsp;results
-similar24,Вычисление семантической близости,Computing similarity
-similar25,"Введите через пробел 2&nbsp;слова, чтобы вычислить их&nbsp;семантическое сходство. Можно также ввести несколько пар, разделяя их&nbsp;запятыми, как в&nbsp;примере.","Enter 2&nbsp;space-separated words to&nbsp;calculate their similarity. It&nbsp;is&nbsp;also possible to&nbsp;enter several pairs separating them with commas, as&nbsp;in&nbsp;the placeholder."
-similar26,"movie film, city town","movie film, city town"
-similar27,Вычислить семантическую близость!,Compute semantic similarity!
-similar28,Пары слов,Word pairs
-similar29,Косинусная близость,Cosine similarity
-similar30,Нет близких слов с&nbsp;такой частью речи,No&nbsp;similar words with this tag
-similar31,История запросов близости,Similarity queries history
-similar32,Слова нет в словаре модели; вектор восстановлен из формы слова.,The word is out of model vocabulary; its embedding is inferred from its characters.
-similar33,Тайга,Taiga
-similar34,"Для каждого слова показана его часть речи (если в модели они размечены).","Parts of speech are shown for each word, if present in the model."
-similar35,Тайга fastText,Taiga fastText
-similar36,GeoWAC fastText,GeoWAC fastText
-synraw1,"Слова, семантически связанные&nbsp;с",Semantically related words for
-synraw2,Какие слова похожи на&nbsp;слово,What words are related&nbsp;to
-synraw3,в,in&nbsp;the
-synraw4,Показать вектор,Show the raw vector&nbsp;of
-synraw5,в&nbsp;модели,in&nbsp;model
-synraw6,Поискать,Search
-synraw7,в&nbsp;Интернете,in&nbsp;the Internet
-synraw8,на&nbsp;Wiktionary,in&nbsp;the Wiktionary
-synraw9,О&nbsp;слове,About the word
-synraw10,&#8212;&nbsp;визуализация вектора; по&nbsp;клику доступна полноразмерная версия,vector plot; click for full-size image
-synraw11,в&nbsp;Википедии,in&nbsp;Wikipedia
-synraw12,Это слово в&nbsp;других моделях,This word in&nbsp;other models
-synraw13,в&nbsp;НКРЯ,in&nbsp;the RNC
-synraw14,частота в корпусе,corpus frequency
-synraw15,часть речи, part of speech
-synraw16,Визуализация вектора,Vector plot
-upload10,"Когда обучение закончится, вы&nbsp;сможете скачать вашу модель здесь:","When the training is&nbsp;finished, you can download your model here:"
-upload11,Размерность векторов:,Vector size:
-upload12,Алгоритм обучения:,Training mode:
-upload13,Размер симметричного окна:,Symmetric window size:
-upload1,Обучите свою модель,Train your model
-upload2,Загрузите свой корпус!,Upload your own corpus!
-upload3,"Введите URL, с&nbsp;которого можно загрузить ваш обучающий корпус. Корпус должен представлять собой txt-файл в&nbsp;кодировке UTF-8 (без некорректных символов), упакованный gzip, и&nbsp;содержащий одно предложение на&nbsp;каждой строке.",Enter a&nbsp;direct URL from where your training corpus can be&nbsp;downloaded. It&nbsp;should be&nbsp;a&nbsp;gzipped plain text UTF-8 (with no&nbsp;incorrect characters) document with one sentence per line.
-upload4,Обработать,Process
-upload5,Ваш файл,Your file from
-upload6,отправлен в&nbsp;очередь на&nbsp;загрузку и&nbsp;обучение.,was put into downloading and training queue.
-upload7,Ваш идентификатор обучения&nbsp;&#8212;,Your training identifier&nbsp;is
-upload8,"Пожалуйста, сохраните его в&nbsp;надежном месте.","Please, write it&nbsp;down somewhere."
-upload9,"Обучение вашей модели займет некоторое время. Типичная скорость обработки&nbsp;&#8212; около 50&nbsp;тысяч слов в&nbsp;секунду (иногда чуть медленнее, в&nbsp;зависимости от&nbsp;многих факторов).",It&nbsp;will take a&nbsp;while to&nbsp;train your model. General safe rule of&nbsp;thumb as&nbsp;for processing speed is&nbsp;approximately 50&nbsp;thousand words a&nbsp;second (plus some additional time for various system pipelines).
-usermodel1,"Модели, созданные пользователями",User-generated models
-usermodel2,Обучение модели на&nbsp;вашем корпусе завершено,Model training on&nbsp;your corpus has finished.
-usermodel3,Здесь вы&nbsp;можете скачать вашу модель в&nbsp;бинарном формате Word2Vec (правая кнопка на&nbsp;ссылке&nbsp;&#8212; Скачать как):,Here you can download your model in&nbsp;binary Word2Vec format (right-click on&nbsp;the link below and press Save Link&nbsp;As):
-usermodel4,Ваша модель с&nbsp;идентификатором,Your model with identifier
-usermodel5,все еще обрабатывается. Приходите попозже.,is&nbsp;still being processed. Please come back later.
-usermodel6,"Извините, идентификатор не&nbsp;распознан.","Unknown identifier, sorry."
-visual1,Визуализация семантических связей между словами,Visualizing word inter-relations
-visual2,Введите cлова через запятую. Мы&nbsp;построим карту их&nbsp;взаимного расположения в&nbsp;выбранной модели/моделях и&nbsp;отобразим двумерную проекцию этой карты (из&nbsp;векторного пространства высокой размерности).,"Enter a&nbsp;comma-separated list of&nbsp;words. We&nbsp;will build a&nbsp;map of&nbsp;their inter-relations in&nbsp;the chosen model(s), and return 2-dimensional version of&nbsp;this map (projected from high-dimensional vector space)."
-visual3,Визуализация взаимного расположения слов при помощи t-SNE,Visual representation of&nbsp;word relations using t-SNE
-visual4,Следующие слова неизвестны модели:,The following words were unknown to&nbsp;the model:
-visual5,&#8212;&nbsp;это алгоритм снижения размерности и&nbsp;визуализации высокоразмерных данных. Он&nbsp;разработан Лоренсом ван дер Маатеном и&nbsp;описан в&nbsp;этой статье:,"is&nbsp;an&nbsp;algorithm for dimensionality reduction and visualization of&nbsp;high-dimensional datasets, developed by&nbsp;Laurens van der Maaten and described in&nbsp;this paper:"
-visual6,Визуализация отношений между словами; по&nbsp;клику доступна полноразмерная версия,Plot for word relations; click for full-size image
-visual7,"car,tank,transport,computer,mouse,Moscow,Paris,London,Russia,France,Britain,clean,dirty,new","car,tank,transport,computer,mouse,Moscow,Paris,London,Russia,France,Britain,clean,dirty,new"
-visual8,Слишком мало слов,Too few words
-visual9,Слова не&nbsp;должны повторяться,Words must be&nbsp;unique
-visual15,Визуализировать,Visualize
-visual16,Визуализация,Visualization
-visual17,вычислено на&nbsp;модели,computed on&nbsp;data from
-visual18,5&nbsp;тысяч наиболее частотных знаменательных слов в&nbsp;НКРЯ,5K most frequent content words in&nbsp;the Russian National Corpus
-visual19,Визуализация отношений между cуществительными; по&nbsp;клику доступна полноразмерная версия,Plot for noun relations; click for full-size image
-visual20,Примеры больших семантических карт,Examples of&nbsp;large semantic maps
-visual21,Тысяча наиболее частотных существительных в&nbsp;корпусе НКРЯ+Википедия,1K&nbsp;most frequent nouns in&nbsp;the RNC+Wikipedia corpus
-visual22,Визуализировать в&nbsp;TensorFlow Projector,Visualize in&nbsp;TensorFlow Projector
-visual23,Показать трёхмерную проекцию взаимного расположения выбранных слов в&nbsp;TensorFlow Projector от&nbsp;Google,Show 3D&nbsp;projection of&nbsp;the chosen words in&nbsp;Google&#8217;s TensorFlow Projector
-visual24,"Вы&nbsp;можете добавлять новые группы слов кнопкой &#8217;(+)&#8217;; они отобразятся на&nbsp;визуализации разными цветами (если группа одна, цвета соответствуют частям речи). Оптимальное общее количество слов&nbsp;&#8212; от&nbsp;7&nbsp;до&nbsp;20.","You can add new groups of&nbsp;words with the &#8217;(+)&#8217; button. They will be&nbsp;visualized with different colors (if&nbsp;there is&nbsp;only 1&nbsp;group, the colors marks parts of&nbsp;speech). Optimal total number of&nbsp;words is&nbsp;from 7&nbsp;to&nbsp;20."
-visual25,Выберите способ визуализации,Choose the method of visualization
-visual26,Визуализация взаимного расположения слов при помощи PCA,Visual representation of&nbsp;word relations using PCA
-frequency1,Частотность слова,Word frequency
-frequency2,Высокая,High
-frequency3,Средняя,Medium
-frequency4,Низкая,Low
-frequency5,Высокочастотные слова: доля в корпусе выше 0.00001,Very frequent words: corpus ratio higher than 0.00001
-frequency6,Среднечастотные слова: доля в корпусе от 0.0000005 до 0.00001,Mid-frequent words: corpus ratio from 0.0000005 to 0.00001
-frequency7,Низкочастотные слова: доля в корпусе ниже 0.0000005,Rare words: corpus ratio less than 0.0000005
-graph1,Показать граф,Show graph
-graph2,Порог близости,Similarity threshold
-graph3,Связи между парами слов с меньшей косинусной близостью не будут показаны,Edges between word pairs with lower cosine similarity will be hidden
-graph4,Число соседей,Number of neighbours
-graph5,Максимальное число. Может измениться в результате частотной фильтрации,Maximum possible number. It can depend on words' frequency in result
-graph6,Показать теги,Show tags
-graph7,Обновить,Refresh
-contextual0,Использование контекстуализированных моделей не настроено.,Contextualized embeddings are not configured.
-contextual1,Двумерный текст: визуализация контекстуализированных языковых моделей,Two-dimensional text: visualising contextualized language models
-contextual2,Введите фразу или предложение (5-15 слов):,Input a phrase or a sentence (5-15 words):
-contextual3,Сосновый бор тянется на многие километры,Сосновый бор тянется на многие километры
-contextual4,Лексические подстановки для слов в вашем запросе:,Lexical substitutes for words from your query:
-contextual5,Подобрать подстановки, Find lexical substitutes
-contextual6,"Мы используем модель ELMo <a href=""https://rusvectores.org/ru/models/#ruwikiruscorpora_tokens_elmo_1024_2019"">ruwikiruscorpora_tokens_elmo_1024_2019</a>, чтобы сгенерировать контекстуализированные вектора для слов в вашем запросе. Затем для каждого такого вектора мы ищем наиболее похожие слова среди 10 тысяч самых частотных слов в словаре этой же модели. Поскольку в контекстуализированных моделях отсутствуют бесконтекстные вектора слов, мы сгенерировали их путём усреднения контекстных векторов каждого вхождения этих слов в обучающем корпусе модели <a href=""https://rusvectores.org/ru/models/#ruwikiruscorpora_tokens_elmo_1024_2019"">ruwikiruscorpora_tokens_elmo_1024_2019</a>.","We will use ELMo models trained on respective corpora to infer contextualized embeddings for words in your query. Then, for each embedding, our ELMoViz function will find most similar words among 10 000 most frequent other words in this model's vocabulary. Since contextualized architectures do not store non-contextual word embeddings, we generated them beforehand by averaging contextualized embeddings of all occurrences of these words in the training corpus of the ruwikiruscorpora_tokens_elmo_1024_2019 model."
-contextual7,"Лексические подстановки иначе называются <i>парадигматические замены</i>. Это слова, которые можно было  подставить на место соответствующего слова в предложении.","Lexical substitutes are also known as <i>paradigmatic replacements</i>. These are the words which can in theory replace the corresponding word in your input sentence."
-contextual8,"<strong>Подстановки будут меняться в зависимости от контекста</strong>, окружающего слово. Чем больше размер шрифта у подстановки, тем более уверена в ней модель.","<strong>Substitutes will change depending on the context</strong>. The larger is the substitute font size, the more certain ELMo is about this word."
-contextual9,"Выберите слой модели:","Choose the model layer:"
-contextual10,История лексических подстановок, Substitute queries history
-contextual11,Английская Википедия,"English Wikipedia"
-contextual12,Норвежский новостной корпус,Norwegian Wikipedia and News
-contextual13,Выберите модель:,Choose the model:
-contextual14,Скачать модель ELMo,Download the ELMo model
-contextual15,Модель,Model
-top,"Только верхний слой","Top layer only"
-average,"Среднее всех слоёв","All layers averaged"
+<p><small>К&nbsp;словам можно дописывать символ подчеркивания &laquo;_&raquo; и&nbsp;<a href=""http://universaldependencies.org/u/pos/all.html"" data-toggle=""tooltip"" data-placement=""top"" title=""NOUN, PROPN, VERB, ADJ..."">тэг части речи</a> (<i>&laquo;река_NOUN&raquo;</i>). В&nbsp;ином случае, <i>RusVectōrēs</i> определит часть речи автоматически.</small></p></div>","Calculate ratios, such as&nbsp;&laquo;<strong>find a&nbsp;word&nbsp;D related to&nbsp;the word&nbsp;C in&nbsp;the same way as&nbsp;the word&nbsp;A is&nbsp;related to&nbsp;the word B</strong>&raquo;. An&nbsp;example is&nbsp;given in&nbsp;the placeholder: which word is&nbsp;in&nbsp;the same relation to&nbsp;the word &laquo;<strong>Лондон</strong>&raquo; as&nbsp;&laquo;<strong>Россия</strong>&raquo; is&nbsp;to&nbsp;&laquo;<strong>Москва</strong>&raquo;? The answer is&nbsp;&laquo;<strong>Великобритания</strong>&raquo;: these concepts are in&nbsp;identical capital relations. <a onclick =""javascript:ShowHide('HiddenDiv')"" href=""javascript:;"" >More on this...</a></p>","«<strong>A kelimesi, B kelimesi ile belli bir açıdan ilişkiliyse, C kelimesi de D kelimesi için aynı açıdan ilişkilidir.</strong>» şeklindeki sorguları çalıştır. Örnek bir sorgu için: «<strong>Ankara</strong>» kelimesi «<strong>Türkiye</strong>» kelimesiyle ilişkiliyse, «<strong>Londra</strong>» kelimesi aynı şekilde hangi kelimeyle ilişkilidir? Cevap «<strong>İngiltere</strong>»: bu kavramlar başkent-ülke ilişkisine sahiptir."
+<div class=""text"" id=""HiddenDiv"" style=""DISPLAY: none"" ><p><small>You can also think of&nbsp;this operation as&nbsp;removing the &laquo;Москва&raquo; component from the semantics of&nbsp;&laquo;Россия&raquo; and augmenting it&nbsp;with &laquo;Лондон&raquo; component. The model inferences that it&nbsp;should change the&nbsp;country. Thus, it&nbsp;outputs &laquo;Великобритания&raquo; as&nbsp;an&nbsp;answer.</small></p></div>","A kelimesi B kelimesiyle ilişkiliyse, C kelimesi de D kelimesiyle aynı ilişkidedir gibi oranları hesaplayabilirsiniz. Örnek bir alanı için: «Ankara» kelimesi «Türkiye» kelimesiyle ilişkiliyse, «Londra» kelimesi de hangi kelimeyle ilişkilidir? Cevap «İngiltere»: bu kavramlar başkent-ülke ilişkisine sahiptir. <a onclick =""javascript:ShowHide('HiddenDiv')"" href=""javascript:;"" >Daha fazla bilgi...</a></p>
+<small>Bu işlemi, "Moskova" bileşenini "Rusya" kelimesinin anlamından çıkarıp, "Londra" bileşeni ile arttırmak olarak da düşünebilirsiniz. Model, ülkeyi değiştirmesi gerektiğini çıkarıyor. Böylece, yanıt olarak "Birleşik Krallık" çıkar.</small></p>"
+calc5,"считает, что это будет:",thinks it&nbsp;will&nbsp;be:,"sanıyor ki, olacak:"
+calc7,НКРЯ,Ruscorpora,Rus Derlemi
+calc8,Русская Wikipedia,Russian Wikipedia,Rus Vikipedisi
+calc9,НКРЯ и&nbsp;русская Wikipedia,Ruscorpora and Russian Wikipedia,Rus derlemi ve Rus Vikipedisi
+calc10,Веб-корпус,Web corpus,Web Derlemi
+calc11,Новостной корпус,News corpus,Yeni derlem
+calc13,computer linguistics,computer linguistics,Bilgisayar Bilimi
+calc18,Вычислить!,Calculate!,Hesapla
+calc21,"Вы&nbsp;можете приписать к&nbsp;слову знак подчеркивания &laquo;_&raquo; и&nbsp;<a href=""http://universaldependencies.org/u/pos/all.html"" data-toggle=""tooltip"" data-placement=""top"" title=""NOUN, PROPN, VERB, ADJ..."">тэг части речи</a> (<i>&laquo;tea_NOUN&raquo;</i>). В&nbsp;ином случае <i>WebVectors</i> определит часть речи самостоятельно.","You can optionally end the words with an&nbsp;underscore and a&nbsp;<a href=""http://universaldependencies.org/u/pos/all.html"" data-toggle=""tooltip"" data-placement=""top"" title=""NOUN, PROPN, VERB, ADJ..."">PoS tag</a> (<i>&laquo;tea_NOUN&raquo;</i>). Otherwise, <i>WebVectors</i> will analyze words on&nbsp;its own.","Sözcüklerin sonuna isteğe bağlı olarak bir alt çizgi ve bir <a href=""http://universaldependencies.org/u/pos/all.html"" data-toggle=""tooltip"" data-placement=""top"" title=""İSİM, ÖZEL İSİM, FİİL, SIFAT..."">PoS etiketi</a> eklenebilir (<i>«çay_ISİM»</i>). Aksi takdirde, <i>WebVectors</i> sözcükleri kendisi analiz edecektir."
+calc23,НКРЯ,Ruscorpora,Rus derlemi
+calc24,Русская Wikipedia,Russian Wikipedia,Rus Vikipedisi
+calc25,НКРЯ и&nbsp;русская Википедия,Ruscorpora and Russian Wikipedia,Rus derlemi ve Rus Vikipedisi
+calc26,Веб-корпус,Web corpus,Web derlemi
+calc27,Новостной корпус,News corpus,Haber derlemi
+calc31,Относится&nbsp;к,Relates&nbsp;to,ilgili
+calc32,"Вы&nbsp;также можете попробовать более сложные операции над векторами, чем простое решение пропорции.","If&nbsp;you feel confident with algebraic operations on&nbsp;vectors, you can try something more sophisticated than simple analogical inference.","Vektörler üzerinde cebirsel işlemler uygulayarak basit benzetimsel çıkarımlardan daha karmaşık ilişkiler elde edebilirsin."
+calc33,mother,mother,erkek
+calc34,daughter,daughter,kral
+calc35,father,father,kadın
+description1,"РусВекторес: дистрибутивная семантика для русского языка, веб-интерфейс и модели для скачивания","WebVectors: word embeddings, web interface and models to download","WebVectors-TR: kelime temsilleri, web arayüzü ve Türkçe modeller"
+home0,"сервис, в котором вы можете исследовать семантические отношения между словами при помощи дистрибутивных моделей.","tool to explore semantic relations between words in distributional models.","Dağıtılmış Türkçe sözcük temsillerinin arasındaki anlamsal bağlantıları keşfedin!"
+home1,WebVectors: семантические модели для русского языка,WebVectors: word embeddings online,Turkish WebVectors: Çevrimiçi Kelime Temsilleri
+home2,"Введите слово, чтобы получить список из&nbsp;10&nbsp;его ближайших семантических ассоциатов (квази-синонимов):","Enter a&nbsp;word to&nbsp;produce a&nbsp;list of&nbsp;its 10&nbsp;nearest semantic associates:","Herhangi bir kelimeye en benzer 10 sözcüğü bulun:"
+home3,Найти похожие слова!,Find similar words!,Benzer kelimeleri bul!
+home4,Семантические ассоциаты для,Semantic associates for,Anlamsal benzerlikler
+home5,вычисленные на&nbsp;модели,computed&nbsp;on,hesaplandı
+home6,&#8217;You shall know a&nbsp;word by&nbsp;the company it&nbsp;keeps.&#8217; (Firth 1957).,&#8217;You shall know a&nbsp;word by&nbsp;the company it&nbsp;keeps.&#8217; (Firth 1957),
+home7,computer,computer,bilgisayar
+home8,1 000 most frequent nouns in the English Wikipedia model,1 000 most frequent nouns in the English Wikipedia model,İngilizce Vikipedi modelindeki en yaygın 1,000 kelime.
+home9,5 000 most frequent words in the English Wikipedia model, 5 000 most frequent words in the English Wikipedia model,İngilizce Vikipedi modelindeki en yaygın 5,000 kelime.
+similar0,Araneum fastText,Araneum fastText,Araneum fastText
+similar1,Вычисление семантических ассоциатов,Computing associates,Benzer Kelimeler
+similar2,"Введите слово, чтобы получить список из&nbsp;10&nbsp;его ближайших семантических аналогов (квази-синонимов). Вы&nbsp;можете приписать к&nbsp;слову знак подчеркивания &laquo;_&raquo; и&nbsp;<a href=""http://universaldependencies.org/u/pos/all.html"" data-toggle=""tooltip"" data-placement=""top"" title=""NOUN, PROPN, VERB, ADJ..."" target=""_blank"">тэг части речи</a> (<i>&laquo;tea_NOUN&raquo;</i>). Если вы&nbsp;этого не&nbsp;сделаете, <i>WebVectors</i> определит часть речи автоматически.","Enter a&nbsp;word to&nbsp;produce a&nbsp;list of&nbsp;its 10&nbsp;nearest semantic associates (quazy-synonyms). You can optionally end the word with an&nbsp;underscore and a&nbsp;<a href=""http://universaldependencies.org/u/pos/all.html"" data-toggle=""tooltip"" data-placement=""top"" title=""NOUN, PROPN, VERB, ADJ..."" target=""_blank"">PoS tag</a> (<i>&laquo;tea_NOUN&raquo;</i>). Otherwise, <i>WebVectors</i> will detect&nbsp;it.","Girdiğin kelimeye en yakın 10 kelimeyi bul. Benzeşim yöntemi, sözcük temsillerinin kalitesini değerlendirmek için sıklıkla kullanılan bir yöntemdir. Amaç, sorguda verilen kelime ile kosinüs benzerliğini maksimize eden ilk 10 kelimeyi bulmaktır."
+similar3,Выберите модель:,Choose the model:,Model seç:
+similar4,НКРЯ,Ruscorpora,Rus Derlemi
+similar5,Английская Wikipedia,English Wikipedia,İngilizce Wikipedi
+similar6,Британский Национальный Корпус,British National Corpus,İngilizce Ulusal Derlemi
+similar7,Норвежский новостной корпус,Norsk Aviskorpus,Norveç Gazete Derlemi
+similar8,Английский Gigaword,English Gigaword,İngilizce Gigaword
+similar9,Показывать только:,Show only:,Sadece bunu göster:
+similar10,Существительные,Nouns,İsimler
+similar11,Глаголы,Verbs,Fiiler
+similar12,Наречия,Adverbs,Zarflar
+similar13,Прилагательные,Adjectives,Sıfatlar
+similar14,Все части речи,All of&nbsp;them,Hepsi
+similar15,Найти похожие слова!,Find similar words!,Benzer kelimeleri bul!
+similar16,Cемантические ассоциаты для,Semantic associates for,Anlamsal ilişkiler:
+similar17,вычислено на&nbsp;модели,computed on&nbsp;data from,İlgili veri kullanılarak hesaplandı:
+similar18,Модели неизвестно слово,The model does not know the word,Model bu kelimeyi tanıyamadı
+similar19,Часть речи запроса,Query part of&nbsp;speech,Kelime türü (PoS) sorgusu
+similar20,Имена собственные,Proper names,Özel isimler
+similar21,Некорректный запрос,Incorrect query,Hatalı sorgu
+similar22,Некорректный тэг,Incorrect tag,Hatalı etiket
+similar23,Нет подходящих результатов,No&nbsp;results,Sonuç bulunamadı
+similar24,Вычисление семантической близости,Computing similarity,Sayısal olarak benzerlik hesaplama
+similar25,"Введите через пробел 2&nbsp;слова, чтобы вычислить их&nbsp;семантическое сходство. Можно также ввести несколько пар, разделяя их&nbsp;запятыми, как в&nbsp;примере.","Enter 2&nbsp;space-separated words to&nbsp;calculate their similarity. It&nbsp;is&nbsp;also possible to&nbsp;enter several pairs separating them with commas, as&nbsp;in&nbsp;the placeholder.","Benzerliklerini hesaplamak için aralarında bir boşluk bırakarak 2 kelime girin. Aynı zamanda, örnekte olduğu gibi virgülle ayrılarak birden fazla kelime çifti de girilebilir."
+similar26,"movie film, city town","movie film, city town","Git gider, gel gelir"
+similar27,Вычислить семантическую близость!,Compute semantic similarity!,Anlamsal benzerlik hesapla!
+similar28,Пары слов,Word pairs,Kelime çiftleri
+similar29,Косинусная близость,Cosine similarity,Kosinüs benzerliği
+similar30,Нет близких слов с&nbsp;такой частью речи,No&nbsp;similar words with this tag,Bu etikete sahip benzer kelimeler
+similar31,История запросов близости,Similarity queries history,Geçmiş benzerlik sorguları 
+similar32,Слова нет в словаре модели; вектор восстановлен из формы слова.,The word is out of model vocabulary; its embedding is inferred from its characters.,Modelin sözcük dağarcığında bulunamadı. Sözcük temsili her bir karakter kullanılarak oluşturulmuştur.
+similar33,Тайга,Taiga,Taiga
+similar34,"Для каждого слова показана его часть речи (если в модели они размечены).","Parts of speech are shown for each word, if present in the model.","Kelime türü etiketleri, modelde mevcutsa her kelimenin yanında gösterilir."
+similar35,Тайга fastText,Taiga fastText,Taiga fastText
+similar36,GeoWAC fastText,GeoWAC fastText,GeoWAC fastText
+similar37,"Word2Vec Skip-Gram: Турецкий веб-корпус Boun (Sak, 2010 г.) и Huawei Corpus (Yıldız, 2016 г.)","Word2Vec Skip-Gram: Turkish Boun Web Corpus (Sak, 2010) and Huawei Corpus (Yıldız, 2016)","Word2Vec Skip-Gram: Türkçe Boun Web Derlemi (Sak, 2010) ve Türkçe Huawei Derlemi (Yıldız, 2016)"
+similar38,"FastText Skip-Gram: Турецкий веб-корпус Boun (Sak, 2010 г.) и Huawei Corpus (Yıldız, 2016 г.)","FastText Skip-Gram: Turkish Boun Web Corpus (Sak, 2010) and Huawei Corpus (Yıldız, 2016)","FastText Skip-Gram: Türkçe Boun Web Derlemi (Sak, 2010) ve Türkçe Huawei Derlemi (Yıldız, 2016)"
+synraw1,"Слова, семантически связанные&nbsp;с",Semantically related words for,Anlamsal olarak ilişkili
+synraw2,Какие слова похожи на&nbsp;слово,What words are related&nbsp;to,İlişkili kelimeler
+synraw3,в,in&nbsp;the,içinde
+synraw4,Показать вектор,Show the raw vector&nbsp;of,Vektörünü göster
+synraw5,в&nbsp;модели,in&nbsp;model,Modelde
+synraw6,Поискать,Search,Ara
+synraw7,в&nbsp;Интернете,in&nbsp;the Internet,İnternet
+synraw8,на&nbsp;Wiktionary,in&nbsp;the Wiktionary,Vikisözlük
+synraw9,О&nbsp;слове,About the word,Kelime hakkında
+synraw10,&#8212;&nbsp;визуализация вектора; по&nbsp;клику доступна полноразмерная версия,vector plot; click for full-size image,vektör grafiği: tam boyutlu resim için tıkla.
+synraw11,в&nbsp;Википедии,in&nbsp;Wikipedia,Vikipedi'de
+synraw12,Это слово в&nbsp;других моделях,This word in&nbsp;other models,Diğer modellerde bu kelimenin karşılığı
+synraw13,в&nbsp;НКРЯ,in&nbsp;the RNC,Rus Ulusal Derlemi
+synraw14,частота в корпусе,corpus frequency,Derlem sıklığı
+synraw15,часть речи, part of speech,Konuşmanın bir kısmı
+synraw16,Визуализация вектора,Vector plot,"Vektör grafiği"
+upload10,"Когда обучение закончится, вы&nbsp;сможете скачать вашу модель здесь:","When the training is&nbsp;finished, you can download your model here:","Eğitim bittiğinde modeli buradan indirebilirsin:"
+upload11,Размерность векторов:,Vector size:,Vektör uzunluğu:
+upload12,Алгоритм обучения:,Training mode:,Eğitim modu:
+upload13,Размер симметричного окна:,Symmetric window size:,Simetrik pencere boyutu
+upload1,Обучите свою модель,Train your model,Modelini eğit.
+upload2,Загрузите свой корпус!,Upload your own corpus!,Kendi derlemini yükle.
+upload3,"Введите URL, с&nbsp;которого можно загрузить ваш обучающий корпус. Корпус должен представлять собой txt-файл в&nbsp;кодировке UTF-8 (без некорректных символов), упакованный gzip, и&nbsp;содержащий одно предложение на&nbsp;каждой строке.",Enter a&nbsp;direct URL from where your training corpus can be&nbsp;downloaded. It&nbsp;should be&nbsp;a&nbsp;gzipped plain text UTF-8 (with no&nbsp;incorrect characters) document with one sentence per line.,"Eğitim derleminin doğrudan indirilebileceği bir URL gir. Bu, her satırda bir cümle olan gzip ile sıkıştırılmış düz bir metin (UTF-8) belgesi olmalıdır."
+upload4,Обработать,Process,İşlem
+upload5,Ваш файл,Your file from,"Dosyanız:"
+upload6,отправлен в&nbsp;очередь на&nbsp;загрузку и&nbsp;обучение.,was put into downloading and training queue.,indirme ve eğitim sırasına konuldu.
+upload7,Ваш идентификатор обучения&nbsp;&#8212;,Your training identifier&nbsp;is,Eğitim tanımlayıcınız:
+upload8,"Пожалуйста, сохраните его в&nbsp;надежном месте.","Please, write it&nbsp;down somewhere.","Lütfen bir yere yazın."
+upload9,"Обучение вашей модели займет некоторое время. Типичная скорость обработки&nbsp;&#8212; около 50&nbsp;тысяч слов в&nbsp;секунду (иногда чуть медленнее, в&nbsp;зависимости от&nbsp;многих факторов).",It&nbsp;will take a&nbsp;while to&nbsp;train your model. General safe rule of&nbsp;thumb as&nbsp;for processing speed is&nbsp;approximately 50&nbsp;thousand words a&nbsp;second (plus some additional time for various system pipelines).,Modelinizi eğitmek biraz zaman alacaktır. İşlem hızı için genel olarak yaklaşık saniyede 50 bin kelime öngörülmektedir.
+usermodel1,"Модели, созданные пользователями",User-generated models,"Kullanıcı tarafından oluşturulmuş modeller"
+usermodel2,Обучение модели на&nbsp;вашем корпусе завершено,Model training on&nbsp;your corpus has finished.,"Eğitim başarıyla sonlandı."
+usermodel3,Здесь вы&nbsp;можете скачать вашу модель в&nbsp;бинарном формате Word2Vec (правая кнопка на&nbsp;ссылке&nbsp;&#8212; Скачать как):,Here you can download your model in&nbsp;binary Word2Vec format (right-click on&nbsp;the link below and press Save Link&nbsp;As):,Aşağıdaki bağlantıya sağ tıklayıp "Bağlantıyı Farklı Kaydet" seçeneğini seçerek modelinizi binary Word2Vec formatında indirebilirsiniz:
+usermodel4,Ваша модель с&nbsp;идентификатором,Your model with identifier,Modelinizin ismi (kimlik)
+usermodel5,все еще обрабатывается. Приходите попозже.,is&nbsp;still being processed. Please come back later.,"İşlem devam ediyor, lütfen bekleyin."
+usermodel6,"Извините, идентификатор не&nbsp;распознан.","Unknown identifier, sorry.","Bilinmeyen bir model, lütfen tekrar deneyin."
+visual1,Визуализация семантических связей между словами,Visualizing word inter-relations,Görselleştirme
+visual2,Введите cлова через запятую. Мы&nbsp;построим карту их&nbsp;взаимного расположения в&nbsp;выбранной модели/моделях и&nbsp;отобразим двумерную проекцию этой карты (из&nbsp;векторного пространства высокой размерности).,"Enter a&nbsp;comma-separated list of&nbsp;words. We&nbsp;will build a&nbsp;map of&nbsp;their inter-relations in&nbsp;the chosen model(s), and return 2-dimensional version of&nbsp;this map (projected from high-dimensional vector space).","Virgülle ayrılmış bir kelime listesi girin. Seçilen model kullanılarak, kelimeler arasındaki ilişkiye göre bir harita oluşturulacak ve bu haritanın 2 boyutlu bir versiyonu (yüksek boyutlu vektör uzayından yansıtılmış) gösterilecek."
+visual3,Визуализация взаимного расположения слов при помощи t-SNE,Visual representation of&nbsp;word relations using t-SNE,t-SNE algoritması kullanılarak kelime temsilleri arasındaki ilişkinin görselleştirilmesi
+visual4,Следующие слова неизвестны модели:,The following words were unknown to&nbsp;the model:,Model tarafından bilinmeyen kelimeler:
+visual5,&#8212;&nbsp;это алгоритм снижения размерности и&nbsp;визуализации высокоразмерных данных. Он&nbsp;разработан Лоренсом ван дер Маатеном и&nbsp;описан в&nbsp;этой статье:,"is&nbsp;an&nbsp;algorithm for dimensionality reduction and visualization of&nbsp;high-dimensional datasets, developed by&nbsp;Laurens van der Maaten and described in&nbsp;this paper:","Laurens van der Maaten tarafından geliştirilen ve ilgili makalede tanımlanan, yüksek boyutlu veri kümelerinin boyutsallık azaltılması ve görselleştirilmesi için kullanılan bir algoritmadır."
+visual6,Визуализация отношений между словами; по&nbsp;клику доступна полноразмерная версия,Plot for word relations; click for full-size image,Kelime ilişkileri için çizim; tam boyutlu resim için tıklayın.
+visual7,"car,tank,transport,computer,mouse,Moscow,Paris,London,Russia,France,Britain,clean,dirty,new","car,tank,transport,computer,mouse,Moscow,Paris,London,Russia,France,Britain,clean,dirty,new","araba, tank, taşıma, bilgisayar, fare, İstanbul, Berlin, Londra, Türkiye, Almanya, İngiltere, temiz, kirli, yeni"
+visual8,Слишком мало слов,Too few words,Çok az kelime
+visual9,Слова не&nbsp;должны повторяться,Words must be&nbsp;unique,Kelimeler özgün (eşsiz) olmalıdır.
+visual15,Визуализировать,Visualize,Görselleştir
+visual16,Визуализация,Visualization,Görselleştirme
+visual17,вычислено на&nbsp;модели,computed on&nbsp;data from,Hesap sırasında kullanılan veri:
+visual18,5&nbsp;тысяч наиболее частотных знаменательных слов в&nbsp;НКРЯ,5K most frequent content words in&nbsp;the Russian National Corpus,Rus Ulusal Derlemindeki en yaygın 5000 kelime.
+visual19,Визуализация отношений между cуществительными; по&nbsp;клику доступна полноразмерная версия,Plot for noun relations; click for full-size image,İsimler arasındaki ilişkiler için çizim; tam boyutlu resim için tıklayın.
+visual20,Примеры больших семантических карт,Examples of&nbsp;large semantic maps,Büyük anlamsal haritaların örnekleri.
+visual21,Тысяча наиболее частотных существительных в&nbsp;корпусе НКРЯ+Википедия,1K&nbsp;most frequent nouns in&nbsp;the RNC+Wikipedia corpus,RNC+Wikipedia korpusundaki en yaygın 1K isim.
+visual22,Визуализировать в&nbsp;TensorFlow Projector,Visualize in&nbsp;TensorFlow Projector,TensorFlow Projector'da görselleştirin.
+visual23,Показать трёхмерную проекцию взаимного расположения выбранных слов в&nbsp;TensorFlow Projector от&nbsp;Google,Show 3D&nbsp;projection of&nbsp;the chosen words in&nbsp;Google&#8217;s TensorFlow Projector,Seçilen kelimelerin Google TensorFlow Projector'daki 3D yansımasını göster.
+visual24,"Вы&nbsp;можете добавлять новые группы слов кнопкой &#8217;(+)&#8217;; они отобразятся на&nbsp;визуализации разными цветами (если группа одна, цвета соответствуют частям речи). Оптимальное общее количество слов&nbsp;&#8212; от&nbsp;7&nbsp;до&nbsp;20.","You can add new groups of&nbsp;words with the &#8217;(+)&#8217; button. They will be&nbsp;visualized with different colors (if&nbsp;there is&nbsp;only 1&nbsp;group, the colors marks parts of&nbsp;speech). Optimal total number of&nbsp;words is&nbsp;from 7&nbsp;to&nbsp;20.","'(+)' butonunu kullanarak yeni kelime grupları ekleyebilirsiniz. Eğer sadece bir grup varsa, renkler konuşma bölümlerini gösterir. En uygun kelime sayısı 7 ile 20 arasındadır."
+visual25,Выберите способ визуализации,Choose the method of visualization,Görselleştirme yöntemi seçin.
+visual26,Визуализация взаимного расположения слов при помощи PCA,Visual representation of&nbsp;word relations using PCA,PCA algoritması ile kelime vektörlerinin görsel temsili.
+frequency1,Частотность слова,Word frequency,Kelime sıklığı
+frequency2,Высокая,High,Yüksek
+frequency3,Средняя,Medium,Orta
+frequency4,Низкая,Low,Düşük
+frequency5,Высокочастотные слова: доля в корпусе выше 0.00001,Very frequent words: corpus ratio higher than 0.00001,Sık geçen kelimeler: Derlemde bulunma oranı 0.00001'den yüksek olan kelimeler
+frequency6,Среднечастотные слова: доля в корпусе от 0.0000005 до 0.00001,Mid-frequent words: corpus ratio from 0.0000005 to 0.00001,Orta-sıklıkta geçen kelimeler: Derlemde bulunma oranı 0.0000005 ile 0.00001 arasında olan kelimeler.
+frequency7,Низкочастотные слова: доля в корпусе ниже 0.0000005,Rare words: corpus ratio less than 0.0000005,Nadir kelimeler: Derlemde bulunma oranı 0,0000005'ten az kelimeler.
+graph1,Показать граф,Show graph,Grafiği göster
+graph2,Порог близости,Similarity threshold,Benzerlik eşiği
+graph3,Связи между парами слов с меньшей косинусной близостью не будут показаны,Edges between word pairs with lower cosine similarity will be hidden,Kelime çiftleri arasındaki kosinüs benzerliği daha düşük olan kenarlar gizlenecektir.
+graph4,Число соседей,Number of neighbours,Komşu sayısı
+graph5,Максимальное число. Может измениться в результате частотной фильтрации,Maximum possible number. It can depend on words' frequency in result,Maksimum olabilecek sayı. Kelimenin geçme sıklığına bağlıdır.
+graph6,Показать теги,Show tags,Etiketleri göster
+graph7,Обновить,Refresh,Yenile
+contextual0,Использование контекстуализированных моделей не настроено.,Contextualized embeddings are not configured.,Bağlamsal kelime temsilleri konfigüre edilmedi.
+contextual1,Двумерный текст: визуализация контекстуализированных языковых моделей,Two-dimensional text: visualising contextualized language models,İki boyutlu metin: bağlamsal dil modellerini görselleştirme
+contextual2,Введите фразу или предложение (5-15 слов):,Input a phrase or a sentence (5-15 words):,Bir ifade veya cümle girin (5-15 kelime):
+contextual3,Сосновый бор тянется на многие километры,Сосновый бор тянется на многие километры,.
+contextual4,Лексические подстановки для слов в вашем запросе:,Lexical substitutes for words from your query:, Sorgunuzdaki kelimelere benzer kelimeler:
+contextual5,Подобрать подстановки, Find lexical substitutes, Benzer anlamlı kelimeleri bul
+contextual6,"Мы используем модель ELMo <a href=""https://rusvectores.org/ru/models/#ruwikiruscorpora_tokens_elmo_1024_2019"">ruwikiruscorpora_tokens_elmo_1024_2019</a>, чтобы сгенерировать контекстуализированные вектора для слов в вашем запросе. Затем для каждого такого вектора мы ищем наиболее похожие слова среди 10 тысяч самых частотных слов в словаре этой же модели. Поскольку в контекстуализированных моделях отсутствуют бесконтекстные вектора слов, мы сгенерировали их путём усреднения контекстных векторов каждого вхождения этих слов в обучающем корпусе модели <a href=""https://rusvectores.org/ru/models/#ruwikiruscorpora_tokens_elmo_1024_2019"">ruwikiruscorpora_tokens_elmo_1024_2019</a>.","We will use ELMo models trained on respective corpora to infer contextualized embeddings for words in your query. Then, for each embedding, our ELMoViz function will find most similar words among 10 000 most frequent other words in this model's vocabulary. Since contextualized architectures do not store non-contextual word embeddings, we generated them beforehand by averaging contextualized embeddings of all occurrences of these words in the training corpus of the ruwikiruscorpora_tokens_elmo_1024_2019 model.","ELMo ile bağlamsal Türkçe sözcük temsillerinin görselleştirilmesi, şimdilik desteklenmemektedir. Kendi modelinizi eklemek için kaynak koddan faydalanabilirsiniz: <a href=https://github.com/Turkish-Word-Embeddings/Turkish-WebVectors>Turkish WebVectors</a>"
+contextual7,"Лексические подстановки иначе называются <i>парадигматические замены</i>. Это слова, которые можно было  подставить на место соответствующего слова в предложении.","Lexical substitutes are also known as <i>paradigmatic replacements</i>. These are the words which can in theory replace the corresponding word in your input sentence.", <span></span>
+contextual8,"<strong>Подстановки будут меняться в зависимости от контекста</strong>, окружающего слово. Чем больше размер шрифта у подстановки, тем более уверена в ней модель.","<strong>Substitutes will change depending on the context</strong>. The larger is the substitute font size, the more certain ELMo is about this word.","<strong>Temsil vektörleri kelimenin bağlamına göre değişecektir</strong>. Çıkan kelimenin yazı tipi boyutu büyüklüğü, ELMo'nun bu kelime hakkında ne kadar emin olduğunu gösterir."
+contextual9,"Выберите слой модели:","Choose the model layer:","Model katmanını seçin:"
+contextual10,История лексических подстановок, Substitute queries history,Yedek sorgu geçmişi
+contextual11,Английская Википедия,"English Wikipedia",İngilizce Vikipedi
+contextual12,Норвежский новостной корпус,Norwegian Wikipedia and News,Norveççe Vikipedi ve Haberler
+contextual13,Выберите модель:,Choose the model:,Model seç:
+contextual14,Скачать модель ELMo,Download the ELMo model,ELMo modelini indir
+contextual15,Модель,Model,Model
+top,"Только верхний слой","Top layer only","Sadece son katman"
+average,"Среднее всех слоёв","All layers averaged","Tüm katmanların ortalaması"

@@ -24,7 +24,7 @@ from strings_reader import language_dicts
 languages = "/".join(list(language_dicts.keys())).upper()
 
 config = configparser.RawConfigParser()
-config.read("webvectors.cfg")
+config.read("/home/ec2-user/Turkish-WebVectors/webvectors.cfg")
 
 root = config.get("Files and directories", "root")
 modelsfile = config.get("Files and directories", "models")

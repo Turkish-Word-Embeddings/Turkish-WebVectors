@@ -1,2 +1,3 @@
 identifier	name	path	string	default	tags	algo	size	lang
-ruscorpora_upos_skipgram_300_5_2018	Russian National Corpus	~/webvectors/models/ruscorpora_upos_skipgram_300_5_2018.vec.gz	similar4	True	True	word2vec	250000000	russian
+word2vec_skipgram_300	 Word2Vec Skipgram	/home/ec2-user/Turkish-WebVectors/models/word2vec_10epoch.bin	similar37	True	False	word2vec	250000000	turkish
+fasttext_skipgram_300	FastText Skipgram	/home/ec2-user/Turkish-WebVectors/models/fasttext_10epoch.bin	similar38	False	False	fastText	250000000	turkish

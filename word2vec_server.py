@@ -66,7 +66,7 @@ def create_model_graph(model_identifier, tmodelfile, ffile):
 
 
 config = configparser.RawConfigParser()
-config.read("webvectors.cfg")
+config.read("/home/ec2-user/Turkish-WebVectors/webvectors.cfg")
 
 root = config.get("Files and directories", "root")
 HOST = config.get("Sockets", "host")  # Symbolic name meaning all available interfaces
