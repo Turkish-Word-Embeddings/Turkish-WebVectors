@@ -11,14 +11,16 @@ import csv
 from flask import Markup
 import configparser
 
+from utils import *
+
 config = configparser.RawConfigParser()
-config.read("/home/ec2-user/Turkish-WebVectors/webvectors.cfg")
+config.read(CONFIG)
 
 root = config.get("Files and directories", "root")
 l10nfile = config.get("Files and directories", "l10n")
 
 # open the strings database:
-csvfile = open(root + l10nfile, "rU")
+csvfile = open(root + l10nfile, "rU", encoding="utf8")
 acrobat = csv.reader(csvfile, dialect="excel", delimiter=",")
 
 # initialize a dictionary for each language:

@@ -2,7 +2,7 @@ import sys
 
 import configparser
 config = configparser.RawConfigParser()
-config.read('/home/ec2-user/Turkish-WebVectors/webvectors.cfg')
+config.read('C:/Users/karab/Desktop/webvectors/webvectors.cfg')
 root = config.get('Files and directories', 'root')
 
 sys.path.insert(0, root)

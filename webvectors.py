@@ -23,8 +23,10 @@ from strings_reader import language_dicts
 
 languages = "/".join(list(language_dicts.keys())).upper()
 
+from utils import *
+
 config = configparser.RawConfigParser()
-config.read("/home/ec2-user/Turkish-WebVectors/webvectors.cfg")
+config.read(CONFIG)
 
 root = config.get("Files and directories", "root")
 modelsfile = config.get("Files and directories", "models")

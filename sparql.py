@@ -4,8 +4,10 @@
 from SPARQLWrapper import SPARQLWrapper, JSON, SPARQLExceptions
 import configparser
 
+from utils import *
+
 config = configparser.RawConfigParser()
-config.read("/home/ec2-user/Turkish-WebVectors/webvectors.cfg")
+config.read(CONFIG)
 
 root = config.get("Files and directories", "root")
 cachefile = config.get("Files and directories", "image_cache")
@@ -41,12 +43,12 @@ def getdbpediaimage(query, cache):
         if len(results["results"]["bindings"]) > 0:
             image = results["results"]["bindings"][0]["pic"]["value"]
             image = image.replace("http://", "https://")
-            data = open(root + cachefile, "a")
+            data = open(root + cachefile, "a", encoding="utf-8")
             data.write(query + "\t" + image + "\n")
             data.close()
             return image
         else:
-            data = open(root + cachefile, "a")
+            data = open(root + cachefile, "a", encoding="utf-8")
             data.write(query + "\tNone\n")
             data.close()
             return None

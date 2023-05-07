@@ -12,12 +12,13 @@ from sklearn.manifold import TSNE
 from sklearn.decomposition import PCA
 import configparser
 
+from utils import *
+
 config = configparser.RawConfigParser()
-config.read("/home/ec2-user/Turkish-WebVectors/webvectors.cfg")
+config.read(CONFIG)
 
 root = config.get("Files and directories", "root")
-path = config.get("Files and directories", "font")
-font = font_manager.FontProperties(fname=path)
+
 
 
 def singularplot(word, modelname, vector, fname):
@@ -25,7 +26,7 @@ def singularplot(word, modelname, vector, fname):
     plot.clf()
     plot.bar(xlocations, vector)
     plot_title = word.split("_")[0].replace("::", " ") + "\n" + modelname + " model"
-    plot.title(plot_title, fontproperties=font)
+    plot.title(plot_title)
     plot.xlabel("Vector components")
     plot.ylabel("Components values")
     plot.savefig(
@@ -90,7 +91,6 @@ def embed(words, matrix, classes, usermodel, fname, method="tsne"):
             xy=(x - mid, y),
             size="x-large",
             weight="bold",
-            fontproperties=font,
             color=color,
         )
 

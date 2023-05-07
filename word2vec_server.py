@@ -64,9 +64,10 @@ def create_model_graph(model_identifier, tmodelfile, ffile):
                     freqdic[external_word] = int(corp_frequency)
     return tmodel, freqdic, current_graph
 
+from utils import *
 
 config = configparser.RawConfigParser()
-config.read("/home/ec2-user/Turkish-WebVectors/webvectors.cfg")
+config.read(CONFIG)
 
 root = config.get("Files and directories", "root")
 HOST = config.get("Sockets", "host")  # Symbolic name meaning all available interfaces
@@ -192,7 +193,7 @@ def find_variants(word, usermodel):
         candidates_set.add(word.lower())
         candidates_set.add(word.capitalize())
     for candidate in candidates_set:
-        if candidate in model.vocab:
+        if candidate in model:
             results = candidate
             break
     return results
@@ -208,13 +209,13 @@ def frequency(word, model, external=None):
         corpus_size = external["corpus_size"]
     else:
         corpus_size = our_models[model]["corpus_size"]
-        if word not in models_dic[model].vocab:
+        if word not in models_dic[model]:
             word = find_variants(word, model)
             if not word:
                 return 0, "low"
         if not our_models[model]["vocabulary"]:
             return 0, "mid"
-        wordfreq = models_dic[model].vocab[word].count
+        wordfreq = models_dic[model].get_vecattr(word, "count")
     relative = wordfreq / corpus_size
     tier = "mid"
     if relative > 0.00001:
@@ -235,7 +236,7 @@ def find_synonyms(query):
     results = {"frequencies": {}, "neighbours_dist": []}
     qf = q
     model = models_dic[usermodel]
-    if qf not in model.vocab:
+    if qf not in model:
         qf = find_variants(qf, usermodel)
         if not qf:
             if our_models[usermodel]["algo"] == "fasttext" and model.__contains__(q):
@@ -279,23 +280,23 @@ def find_similarity(query):
         (q1, q2) = pair
         qf1 = q1
         qf2 = q2
-        if q1 not in model.wv.vocab:
+        if q1 not in model:
             qf1 = find_variants(qf1, usermodel)
             if not qf1:
                 if our_models[usermodel][
                     "algo"
-                ] == "fasttext" and model.wv.__contains__(q1):
+                ] == "fasttext" and model.__contains__(q1):
                     results["inferred"] = True
                     qf1 = q1
                 else:
                     results["Unknown to the model"] = q1
                     return results
-        if q2 not in model.wv.vocab:
+        if q2 not in model:
             qf2 = find_variants(qf2, usermodel)
             if not qf2:
                 if our_models[usermodel][
                     "algo"
-                ] == "fasttext" and model.wv.__contains__(q2):
+                ] == "fasttext" and model.__contains__(q2):
                     results["inferred"] = True
                     qf2 = q2
                 else:
@@ -323,7 +324,7 @@ def scalculator(query):
     for word in positive_list:
         if len(word) < 2:
             continue
-        if word in model.vocab:
+        if word in model:
             plist.append(word)
             continue
         else:
@@ -331,7 +332,7 @@ def scalculator(query):
             if not q:
                 if our_models[usermodel][
                     "algo"
-                ] == "fasttext" and model.wv.__contains__(word):
+                ] == "fasttext" and model.__contains__(word):
                     results["inferred"] = True
                     plist.append(word)
                 else:
@@ -342,7 +343,7 @@ def scalculator(query):
     for word in negative_list:
         if len(word) < 2:
             continue
-        if word in model.vocab:
+        if word in model:
             nlist.append(word)
             continue
         else:
@@ -350,7 +351,7 @@ def scalculator(query):
             if not q:
                 if our_models[usermodel][
                     "algo"
-                ] == "fasttext" and model.wv.__contains__(word):
+                ] == "fasttext" and model.__contains__(word):
                     results["inferred"] = True
                     nlist.append(word)
                 else:
@@ -413,10 +414,10 @@ def vector(query):
     results["frequencies"] = {}
     results["frequencies"][q] = frequency(q, usermodel)
     model = models_dic[usermodel]
-    if q not in model.wv.vocab:
+    if q not in model:
         qf = find_variants(qf, usermodel)
         if not qf:
-            if our_models[usermodel]["algo"] == "fasttext" and model.wv.__contains__(q):
+            if our_models[usermodel]["algo"] == "fasttext" and model.__contains__(q):
                 results["inferred"] = True
                 qf = q
             else:
