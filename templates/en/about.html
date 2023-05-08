@@ -8,8 +8,54 @@
 {% block content %}
         <h1>About</h1>
         <p style="font-size: 16px;">Turkish WebVectors is a tool to compute semantic relations between words in Turkish on the web, 
-                making it easy to demonstrate their abilities to general public. 
-                It is based on the toolkit <a href="https://github.com/akutuzov/webvectors">WebVectors</a> 
-                Semantic vectors reflect meaning based on word co-occurrence 
-                <strong>distribution</strong> in the training corpus (huge amounts of raw linguistic data).</p>
+        making it easy to demonstrate their abilities to general public. 
+        It is based on the toolkit <a href="https://github.com/akutuzov/webvectors">WebVectors</a> developed by Kutuzov <i>et al.</i> <a href="https://aclanthology.org/E17-3025.pdf">[1]</a>.
+        Semantic vectors reflect meaning based on word co-occurrence 
+        <strong>distribution</strong> in the training corpus (huge amounts of raw linguistic data).</p>
+<blockquote><p style="font-size: 16px;">In <a href="https://en.wikipedia.org/wiki/Distributional_semantics">distributional semantics</a>,
+words are commonly represented as vectors in a multi-dimensional space based on their contextual usage. The idea is that words that share similar contextual usage 
+patterns are likely to be semantically similar. To calculate the degree of semantic similarity between two words, their corresponding vectors are compared using a mathematical formula known as <a href="https://en.wikipedia.org/wiki/Cosine_similarity">cosine similarity</a>,
+which yields a value between -1 and 1. A cosine similarity value of <strong>0</strong> indicates that the two words have dissimilar contextual usage patterns and are
+therefore semantically unrelated. On the other hand, a value of <strong>1</strong> indicates that the two words have identical contextual usage patterns and
+are thus highly semantically similar. The cosine similarity measure is often used in natural language processing tasks such as word embeddings and text classification.<a href="http://vectors.nlpl.eu/explore/embeddings/en/about/">*</a></p></blockquote>
+
+<p style="font-size: 16px;">The rise of diverse word embedding techniques has led to an increasing prominence of distributional semantics.
+        In spite of its long-time existence, learning word embeddings with neural networks gained its popularity due to Word2Vec, 
+        a word embedding toolkit that can train vector space models faster than previous approaches, which was developed by Mikolov 
+        <i>et al.</i> <a href="https://arxiv.org/pdf/1301.3781.pdf">[2]</a>. Since then, numerous models have been proposed that build on the original Word2Vec 
+        architectures. Bojanowski <i>et al.</i> <a href="https://arxiv.org/pdf/1607.04606.pdf">[3]</a> developed FastText, which improved upon the previous
+         model by representing words as character N-grams. This modification was aimed at addressing out-of-vocabulary words and improving
+          the performance of languages with complex morphology, such as Turkish. Pennington <i>et al.</i> <a href="https://aclanthology.org/D14-1162.pdf">[4]</a>
+           proposed a method with GloVe that utilizes global word-word co-occurrence counts and thus effectively leverages statistics during training. 
+        In contrast to Word2Vec and FastText, GloVe uses a global co-occurrence matrix along with local context window methods. Moreover, contextual word embedding
+        algorithms such as BERT <a href="https://arxiv.org/pdf/1810.04805.pdf">[5]</a> and ELMo <a href="https://arxiv.org/pdf/1802.05365.pdf">[6]</a> are developed where embedding of a word is generated based on its context.</p>
+
+<p style="font-size: 16px;"> As a part of our bachelor's project, we have developed this web service that allows you to explore semantic relations between words in Turkish.
+This service utilizes the general template provided by <a href="https://github.com/akutuzov/webvectors">WebVectors</a>. As stated out by them, the reason behind <i>WebVectors</i> is to lower the entry threshold for those who want to work in this new and exciting field.</p>
+<h2>What does it do?</h2>
+<p style="font-size: 16px;"><i>Turkish WebVectors</i> is basically a tool to explore relations between words in distributional models. 
+You can think about it as a kind of <strong>semantic calculator</strong>.</p>
+<p style="font-size: 16px;">Much more word embeddings models can be found in our <a href="https://github.com/Turkish-Word-Embeddings/Word-Embeddings-Repository-for-Turkish">Turkish Word Embeddings repository</a>.</p>
+
+<ol>
+<li style="padding-top: 10px;"><a href="{{ url }}{{lang}}/misc/">calculate semantic similarity</a> between pairs of words;</li>
+<li style="padding-top: 10px;"><a href="{{ url }}{{lang}}/associates/">find words semantically closest to the query word</a></li>
+<li style="padding-top: 10px;"><a href="{{ url }}{{lang}}/calculator/">perform analogical inference</a>: find a word <strong>X</strong> which is related to the word <strong>Y</strong> in the same way as the word <strong>A</strong> is related to the word <strong>B</strong>;</li>
+<li style="padding-top: 10px;"><a href="{{ url }}{{lang}}/visual/">draw 2D and 3D semantic maps</a> of relations between input words (it is useful to explore clusters and oppositions);</li>
+</ol>
+
+<h2>Links</h2>
+<p style="font-size: 16px;">This service runs on <a href="https://github.com/akutuzov/webvectors">WebVectors</a>, free and open source toolkit for serving distributional semantic models over the web.</p>
+<p style="font-size: 16px;">You can also check <a href="https://rusvectores.org/en/">RusVectōrēs</a>, web vectors for Russian.</p>
+
+<h2>Citing Us</h2>
+<p style="font-size: 16px;"><i>If you use our service in your research, please cite this paper:</i></p>
+<p style="font-size: 16px;"><i><a href="">Under progress</a> </i></p>
+
+<h2>Contact</h2>
+<ul>
+<li style="padding-top: 10px;"><a href="https://www.linkedin.com/in/cahid-arda/">Cahid Arda Öz</li>
+<li style="padding-top: 10px;"><a href="https://www.linkedin.com/in/karahan-saritas/">Karahan Sarıtaş</a></li>
+</ul>
+      </div>
 {% endblock %}

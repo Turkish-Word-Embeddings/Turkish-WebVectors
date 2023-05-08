@@ -1,0 +1,32 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Turkish WebVectors
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Cahid Arda
+    family-names: Öz
+    email: cahid.oz@boun.edu.tr
+    affiliation: Boğaziçi University
+  - given-names: Karahan
+    family-names: Sarıtaş
+    email: karahan.saritas@boun.edu.tr
+    affiliation: Boğaziçi University
+  - given-names: Tunga
+    family-names: Güngör
+    email: gungort@boun.edu.tr
+    affiliation: Boğaziçi University
+    orcid: 'https://orcid.org/0000-0001-9448-9422'
+repository-code: >-
+  https://github.com/Turkish-Word-Embeddings/Turkish-WebVectors
+repository: >-
+  https://github.com/Turkish-Word-Embeddings/Word-Embeddings-Repository-for-Turkish
+abstract: >-
+  Turkish WebVectors: Tool to explore semantic relations
+  between words in distributional models.
+license: GPL-3.0
+version: 1.0.0

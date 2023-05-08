@@ -85,6 +85,7 @@
               {% endif %}
               </a>
               {{ "{:.2f} ".format(res[1]) }}
+              <!--
               {% if wordimages[res[0].split('_')[0]] -%}
               <div class="avataricon">
                 <a href="https://en.wikipedia.org/wiki/{{ res[0].split('_')[0] }}" target="_blank">
@@ -93,6 +94,7 @@
                 </a>
               </div>
               {% endif -%}
+              -->
               {% endif -%}
               </li>
               {%- endfor -%}
@@ -200,6 +202,7 @@
             {% endif %}
             </a>
             {{ "{:.2f} ".format(res[1]) }}
+             <!--
             {% if wordimages[res[0].split('_')[0]] -%}
             <div class="avataricon">
               <a href="https://en.wikipedia.org/wiki/{{ res[0].split('_')[0] }}" target="_blank">
@@ -208,6 +211,7 @@
               </a>
             </div>
             {% endif -%}
+          -->
             </li>
             {%- endfor -%}
           </ol>

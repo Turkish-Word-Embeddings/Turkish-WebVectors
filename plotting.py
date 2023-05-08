@@ -19,8 +19,6 @@ config.read(CONFIG)
 
 root = config.get("Files and directories", "root")
 
-
-
 def singularplot(word, modelname, vector, fname):
     xlocations = np.array(list(range(len(vector))))
     plot.clf()

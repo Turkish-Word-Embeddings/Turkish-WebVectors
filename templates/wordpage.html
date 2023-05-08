@@ -67,7 +67,7 @@
         {{ "{:.4f} ".format(res[1]) }}
         {% if wordimages[res[0].split('_')[0]] -%}
         <div class="avataricon">
-          <a href="https://en.wikipedia.org/wiki/{{ res[0].split('_')[0] }}" target="_blank">
+          <a href="https://tr.wikipedia.org/wiki/{{ res[0].split('_')[0] }}" target="_blank">
           <img src = "{{ wordimages[res[0].split('_')[0]] }}" alt = "{{res[0].split('_')[0]|capitalize }} {{strings['synraw11']}}"
             title = "{{ res[0].split('_')[0]|capitalize }} {{strings['synraw11']}}" width="30">
           </a>
@@ -137,7 +137,7 @@
   <div class="col-md-6">
      <!-- Illustration -->
     {%- if image -%}
-    <a href="https://en.wikipedia.org/wiki/{{ word.split('_')[0].replace('::', ' ')  }}" target="_blank">
+    <a href="https://tr.wikipedia.org/wiki/{{ word.split('_')[0].replace('::', ' ')  }}" target="_blank">
     <img src = '{{ image }}' alt = "{{word.split('_')[0].replace('::', ' ') }} {{strings['synraw11']}}"
       title = "{{word.split('_')[0].replace('::', ' ') }} {{strings['synraw11']}}" class="img-responsive">
     </a>

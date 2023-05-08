@@ -16,7 +16,7 @@ base14,Университет Осло, University of Oslo,Oslo Üniversitesi
 base15,Национальный Исследовательский Университет Высшая Школа Экономики,National Research University Higher School of Economics,Rusya Yüksek Ekonomi Okulu Ulusal Araştırma Üniversitesi
 base16,Switch language,Сменить язык,Dil değiştir
 base17,Различные операции,Similarity Calculation,Benzerlik Hesaplama
-base18,"Слова, выделенные <span style='color: green;'>зеленым</span>, являются высокочастотными (доля в корпусе выше 0.00001); слова, выделенные <span style='color: red;'>красным</span>, являются низкочастотными (доля в корпусе ниже 0.0000005).","Words in <span style='color: green;'>green</span> are top frequent (corpus ratio higher than 0.00001); words in <span style='color: red;'>red</span>, are low frequent (corpus ratio less than 0.0000005).","<span style='color: green;'>Yeşil</span> renkli kelimeler, en sık kullanılan kelimelerdir (Derlemde bulunma oranı 0.00001'den daha yüksektir); <span style='color: red;'>kırmızı</span> renkli kelimeler ise düşük sıklıkta kullanılan kelimelerdir (Derlemde bulunma oranı 0.0000005'ten daha azdır)."
+base18,"Слова, выделенные <span style='color: green;'>зеленым</span>, являются высокочастотными (доля в корпусе выше 0.00001); слова, выделенные <span style='color: red;'>красным</span>, являются низкочастотными (доля в корпусе ниже 0.0000005).",,
 base19,"Показаны только ассоциаты той же части речи, что и слово в запросе. Изменить этот фильтр можно на вкладке <a href=""/associates/"">Похожие слова</a>.","We show only the associates of the same part of speech as your query. All associates can be found at the <a href=""/associates/"">Similar Words</a> tab.","Sadece sorgunuzla aynı kelime türüne sahip kelimelerin eş anlamlılarını gösteriyoruz. Tüm eş anlamlı kelimeler <a href=""/associates/"">Benzer Kelimeler</a> sekmesinde bulunabilir."
 base20,2D-текст,2D text,Bağlamsal Sözcük Temsilleri
 calc1,Семантический калькулятор,Semantic Calculator,Anlamsal Hesap Makinesi
@@ -33,7 +33,7 @@ calc8,Русская Wikipedia,Russian Wikipedia,Rus Vikipedisi
 calc9,НКРЯ и&nbsp;русская Wikipedia,Ruscorpora and Russian Wikipedia,Rus derlemi ve Rus Vikipedisi
 calc10,Веб-корпус,Web corpus,Web Derlemi
 calc11,Новостной корпус,News corpus,Yeni derlem
-calc13,computer linguistics,computer linguistics,bilgisayar dilbilim
+calc13,computer linguistics,bilgisayar dilbilim,bilgisayar dilbilim
 calc18,Вычислить!,Calculate!,Hesapla
 calc21,"Вы&nbsp;можете приписать к&nbsp;слову знак подчеркивания &laquo;_&raquo; и&nbsp;<a href=""http://universaldependencies.org/u/pos/all.html"" data-toggle=""tooltip"" data-placement=""top"" title=""NOUN, PROPN, VERB, ADJ..."">тэг части речи</a> (<i>&laquo;tea_NOUN&raquo;</i>). В&nbsp;ином случае <i>WebVectors</i> определит часть речи самостоятельно.","You can optionally end the words with an&nbsp;underscore and a&nbsp;<a href=""http://universaldependencies.org/u/pos/all.html"" data-toggle=""tooltip"" data-placement=""top"" title=""NOUN, PROPN, VERB, ADJ..."">PoS tag</a> (<i>&laquo;tea_NOUN&raquo;</i>). Otherwise, <i>WebVectors</i> will analyze words on&nbsp;its own.","Sözcüklerin sonuna isteğe bağlı olarak bir alt çizgi ve bir <a href=""http://universaldependencies.org/u/pos/all.html"" data-toggle=""tooltip"" data-placement=""top"" title=""İSİM, ÖZEL İSİM, FİİL, SIFAT..."">PoS etiketi</a> eklenebilir (<i>«çay_ISİM»</i>). Aksi takdirde, <i>WebVectors</i> sözcükleri kendisi analiz edecektir."
 calc23,НКРЯ,Ruscorpora,Rus derlemi
@@ -43,9 +43,9 @@ calc26,Веб-корпус,Web corpus,Web derlemi
 calc27,Новостной корпус,News corpus,Haber derlemi
 calc31,Относится&nbsp;к,Relates&nbsp;to,ilgili
 calc32,"Вы&nbsp;также можете попробовать более сложные операции над векторами, чем простое решение пропорции.","If&nbsp;you feel confident with algebraic operations on&nbsp;vectors, you can try something more sophisticated than simple analogical inference.","Vektörler üzerinde cebirsel işlemler uygulayarak basit benzetimsel çıkarımlardan daha karmaşık ilişkiler elde edebilirsin."
-calc33,mother,man,adam
-calc34,daughter,king,kral
-calc35,father,woman,kadın
+calc33,mother,adam,adam
+calc34,daughter,kral,kral
+calc35,father,kadın,kadın
 description1,"РусВекторес: дистрибутивная семантика для русского языка, веб-интерфейс и модели для скачивания","WebVectors: word embeddings, web interface and models to download","WebVectors-TR: kelime temsilleri, web arayüzü ve Türkçe modeller"
 home0,"сервис, в котором вы можете исследовать семантические отношения между словами при помощи дистрибутивных моделей.","Tool to explore semantic relations between Turkish words in distributional models.","Türkçe kelimeler arasındaki anlamsal ilişkileri keşfedin!"
 home1,WebVectors: семантические модели для русского языка,Turkish WebVectors: Word Embeddings Online,Turkish WebVectors: Çevrimiçi Kelime Temsilleri
@@ -54,12 +54,12 @@ home3,Найти похожие слова!,Find similar words!,Benzer kelimeler
 home4,Семантические ассоциаты для,Semantic associates for,Kendisine benzer kelimelerin listelendiği sözcük:
 home5,вычисленные на&nbsp;модели,computed&nbsp;on,<br/>Aşağıdaki model kullanılarak hesaplandı:<br/>
 home6,&#8217;You shall know a&nbsp;word by&nbsp;the company it&nbsp;keeps.&#8217; (Firth 1957).,&#8217;You shall know a&nbsp;word by&nbsp;the company it&nbsp;keeps.&#8217; (Firth 1957),
-home7,computer,computer,bilgisayar
+home7,computer,gece,gece
 home8,1 000 most frequent nouns in the English Wikipedia model,1 000 most frequent nouns in the English Wikipedia model,İngilizce Vikipedi modelindeki en yaygın 1,000 kelime.
 home9,5 000 most frequent words in the English Wikipedia model, 5 000 most frequent words in the English Wikipedia model,İngilizce Vikipedi modelindeki en yaygın 5,000 kelime.
 similar0,Araneum fastText,Araneum fastText,Araneum fastText
 similar1,Вычисление семантических ассоциатов,Computing associates,Benzer Kelimeler
-similar2,"Введите слово, чтобы получить список из&nbsp;10&nbsp;его ближайших семантических аналогов (квази-синонимов). Вы&nbsp;можете приписать к&nbsp;слову знак подчеркивания &laquo;_&raquo; и&nbsp;<a href=""http://universaldependencies.org/u/pos/all.html"" data-toggle=""tooltip"" data-placement=""top"" title=""NOUN, PROPN, VERB, ADJ..."" target=""_blank"">тэг части речи</a> (<i>&laquo;tea_NOUN&raquo;</i>). Если вы&nbsp;этого не&nbsp;сделаете, <i>WebVectors</i> определит часть речи автоматически.","Enter a&nbsp;word to&nbsp;produce a&nbsp;list of&nbsp;its 10&nbsp;nearest semantic associates (quazy-synonyms). You can optionally end the word with an&nbsp;underscore and a&nbsp;<a href=""http://universaldependencies.org/u/pos/all.html"" data-toggle=""tooltip"" data-placement=""top"" title=""NOUN, PROPN, VERB, ADJ..."" target=""_blank"">PoS tag</a> (<i>&laquo;tea_NOUN&raquo;</i>). Otherwise, <i>WebVectors</i> will detect&nbsp;it.","Girdiğin kelimeye en yakın 10 kelimeyi bul. Benzeşim yöntemi, sözcük temsillerinin kalitesini değerlendirmek için sıklıkla kullanılan bir yöntemdir. Amaç, sorguda verilen kelime ile kosinüs benzerliğini maksimize eden ilk 10 kelimeyi bulmaktır."
+similar2,"Введите слово, чтобы получить список из&nbsp;10&nbsp;его ближайших семантических аналогов (квази-синонимов). Вы&nbsp;можете приписать к&nbsp;слову знак подчеркивания &laquo;_&raquo; и&nbsp;<a href=""http://universaldependencies.org/u/pos/all.html"" data-toggle=""tooltip"" data-placement=""top"" title=""NOUN, PROPN, VERB, ADJ..."" target=""_blank"">тэг части речи</a> (<i>&laquo;tea_NOUN&raquo;</i>). Если вы&nbsp;этого не&nbsp;сделаете, <i>WebVectors</i> определит часть речи автоматически.","Find the 10 words closest to the word you entered. The similarity method is a commonly used method for evaluating the quality of word representations. The aim is to find the first 10 words that maximize cosine similarity with the word given in the query.","Girdiğin kelimeye en yakın 10 kelimeyi bul. Benzeşim yöntemi, sözcük temsillerinin kalitesini değerlendirmek için sıklıkla kullanılan bir yöntemdir. Amaç, sorguda verilen kelime ile kosinüs benzerliğini maksimize eden ilk 10 kelimeyi bulmaktır."
 similar3,Выберите модель:,Choose the model:,Model seç:
 similar4,НКРЯ,Ruscorpora,Rus Derlemi
 similar5,Английская Wikipedia,English Wikipedia,İngilizce Wikipedi
@@ -68,7 +68,7 @@ similar7,Норвежский новостной корпус,Norsk Aviskorpus,N
 similar8,Английский Gigaword,English Gigaword,İngilizce Gigaword
 similar9,Показывать только:,Show only:,Sadece bunu göster:
 similar10,Существительные,Nouns,İsimler
-similar11,Глаголы,Verbs,Fiiler
+similar11,Глаголы,Verbs,Fiiller
 similar12,Наречия,Adverbs,Zarflar
 similar13,Прилагательные,Adjectives,Sıfatlar
 similar14,Все части речи,All of&nbsp;them,Hepsi
