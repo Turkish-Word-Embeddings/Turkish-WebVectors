@@ -21,9 +21,9 @@ pip install gunicorn
 ```
 
 ## Models
-* `Word2Vec skip-gram Negative Sampling`: Trained with [gensim](https://radimrehurek.com/gensim/models/word2vec.html) using 300 dimensions, 5 epochs, 5 negative samples, minimum word count set to 5 and window size set to 5.
+* `Word2Vec skip-gram Negative Sampling`: Trained with [gensim](https://radimrehurek.com/gensim/models/word2vec.html) using 300 dimensions, 10 epochs, 5 negative samples, minimum word count set to 10 and window size set to 5.
 
-* `FastText skip-gram Negative Sampling`: Trained with [gensim](https://radimrehurek.com/gensim/models/fasttext.html) using 300 dimensions, 5 epochs, 5 negative samples, minimum word count set to 5 and window size set to 5.
+* `FastText skip-gram Negative Sampling`: Trained with [gensim](https://radimrehurek.com/gensim/models/fasttext.html) using 300 dimensions, 10 epochs, 5 negative samples, minimum word count set to 10 and window size set to 5.
 
 
 

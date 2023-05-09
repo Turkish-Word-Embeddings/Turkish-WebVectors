@@ -2,3 +2,65 @@
 {%- block title %}
 <title>Models</title>
 {%- endblock title %}
+{%- block content %}
+<h1>Models</h1>
+<p>The following models are available for online exploration (more to download in our <a href="https://github.com/Turkish-Word-Embeddings/Word-Embeddings-Repository-for-Turkish/releases/tag/v1.0.0/">Word Embeddings Repository for Turkish</a>):</p>
+<p>To train our models, we used the resulting corpora by combining <a href="tulap.cmpe.boun.edu.tr/repository/xmlui/handle/20.500.12913/16">Boun Web Corpus</a> and <a href="https://github.com/onurgu/linguistic-features-in-turkish-word-representations/releases">Huawei Corpus</a>.  After
+    combining the corpora, we directly trained our models on them
+    without any preprocessing. The resulting corpora had a size of
+    approximately 10.5 GB. Overall, it had 1,384,961,747 tokens and 1,573,013 unique words (excluding words occurring less
+    than the minimum frequency, which was set to 10).</p>
+    <table class="table table-hover">
+        <tbody><tr><td>
+        * <strong id="word2vec_skipgram_300">Word2Vec skip-gram negative sampling</strong> 
+        <p>We trained Word2Vec skip-gram with negative sampling (number of negative samples = 5) for 10 epochs, used a 300-dimensional vector space and window size set to 5.</p>
+        <p>Model performance on analogy tasks<a href="https://en.wikipedia.org/wiki/Mean_reciprocal_rank">*</a>:</p>
+        <ul>
+            <li>Average MRR on <i>İsim çekim ekleri</i>: <b>0.329</b></li>
+            <li>Average MRR on <i>Fiil çekim ekleri</i>: <b>0.609</b></li>
+            <li>Average MRR on <i>Semantic categories</i>: <b>0.551</b></li>
+        </ul>
+        <p><a href="https://github.com/Turkish-Word-Embeddings/Word-Embeddings-Repository-for-Turkish/releases/download/v1.0.0/word2vec-skipgram-epoch_10-dim_300-min_count_10-window_5.rar">Download the model</a> (1.66 GB)</p>
+        </td></tr>
+
+
+        <tr><td>
+        * <strong id="fasttext_skipgram_300">FastText skip-gram negative sampling</strong>
+        <p>We trained FastText skip-gram with negative sampling (number of negative samples = 5) for 10 epochs, used a 300-dimensional vector space and window size set to 5.
+        Overall, FastText performs better than Word2Vec on syntactic tasks whereas Word2Vec outperforms FastText on semantic tasks.</p>
+        <p>Model performance on analogy tasks<a href="https://en.wikipedia.org/wiki/Mean_reciprocal_rank">*</a>:</p>
+        <ul>
+        <li>Average MRR on <i>İsim çekim ekleri</i>: <b>0.371</b></li>
+        <li>Average MRR on <i>Fiil çekim ekleri</i>: <b>0.697</b></li>
+        <li>Average MRR on <i>Semantic categories</i>: <b>0.303</b></li>
+        </ul>
+        <p><a href="https://github.com/Turkish-Word-Embeddings/Word-Embeddings-Repository-for-Turkish/releases/download/v1.0.0/fasttext-epoch_10-dim_300-min_count_10-window_5.rar">Download the model</a> (1.66 GB)</p>
+        </td></tr>
+
+        
+        <tr><td>
+            * <strong id="glove_itr_100">GloVe</strong>
+            <p>We trained our GloVe model with 100 iterations, using a 300-dimensional vector space and window size set to 5. Compared to Word2Vec and FastText, GloVe exhibits poor performance in intrinsic evaluation datasets for Turkish.</p>
+            <p>Model performance on analogy tasks<a href="https://en.wikipedia.org/wiki/Mean_reciprocal_rank">*</a>:</p>
+            <ul>
+            <li>Average MRR on <i>İsim çekim ekleri</i>: <b>0.144</b></li>
+            <li>Average MRR on <i>Fiil çekim ekleri</i>: <b>0.330</b></li>
+            <li>Average MRR on <i>Semantic categories</i>: <b>0.460</b></li>
+            </ul>
+            <p><a href="https://github.com/Turkish-Word-Embeddings/Word-Embeddings-Repository-for-Turkish/releases/download/v1.0.0/glove-itr_100-dim_300-min_count_10-window_5.rar">Download the model</a> (1.48 GB)</p>
+            </td></tr>
+    
+
+        
+        </tbody></table>
+        </div>
+
+
+            <p>
+                To work with your own models, you can download the <a href="https://github.com/Turkish-Word-Embeddings/Turkish-WebVectors">source code</a> and add your model to the <code>models</code> folder and <code>contextualized_models.tsv</code>.
+                <br/>
+                To see additional evaluation results of our models, you may refer to our report available <a href="https://github.com/Turkish-Word-Embeddings/Word-Embeddings-Repository-for-Turkish/blob/main/CmpE%20493%20Report.pdf">here</a>. 
+            </p>
+ 
+
+        {% endblock %}

@@ -94,7 +94,7 @@ def embed(words, matrix, classes, usermodel, fname, method="tsne"):
 
     plot.tick_params(axis="x", which="both", bottom=False, top=False, labelbottom=False)
     plot.tick_params(axis="y", which="both", left=False, right=False, labelleft=False)
-    plot.legend(loc="best")
+    #plot.legend(loc="best")
 
     plot.savefig(
         f"{root}data/images/tsneplots/{usermodel}_{fname}_{method}.png",
