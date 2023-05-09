@@ -7,4 +7,59 @@
 
 {% block content %}
         <h1>Hakkında</h1>
+        <p style="font-size: 16px;">Turkish WebVectors, Türkçe kelimeler arasındaki anlam ilişkilerini incelemek için kullanılabilecek bir web uygulamasıdır. Bu uygulamanın amacı,
+                farklı kelime temsil modellerini kullanarak, Türkçe kelimeler arasındaki anlamsal benzerlikleri incelemek ve bu modellerin performanslarını karşılaştırmaktır. 
+        Uygulama, Kutuzov ve Kuzmenko <a href="https://aclanthology.org/E17-3025.pdf">[1]</a> tarafından geliştirilen <a href="https://github.com/akutuzov/webvectors">WebVectors</a> projesinden faydalanmaktadır.
+
+        <blockquote><p style="font-size: 16px;"> <a href="https://en.wikipedia.org/wiki/Distributional_semantics">Dağılımsal anlambilimde</a>,
+kelimeler genellikle kullanıldıkları bağlamdan hareketle oluşturulan çok-boyutlu vektörlerle temsil edilir. Anlamsal olarak benzer kelimelerin, benzer bağlamlarda kullanılacağı varsayılmaktadır. 
+İki kelime arasındaki anlamsal benzerliğin hesaplanması için, bu kelimelere karşılık gelen vektörler arasındaki <a href="https://en.wikipedia.org/wiki/Cosine_similarity">kosinüs benzerliği</a> kullanılmaktadır. Kosinüs benzerliği, -1 
+ile 1 arasında bir değer alabilir. Eğer iki kelime arasındaki kosinüs benzerliği 0 ise, bu o kelimelerin anlamsal olarak birbirinden tamamen alakasız olduğu gösterir. Aynı şekilde kosinüs benzerliği 1 ise, bu kelimeler arasında
+güçlü bir benzerlik olduğu anlamına gelir. Kosinüs benzerliği, doğal dil işleme problemlerinde sıklıkla kullanılan bir yöntemdir.</blockquote>
+
+<p style="font-size: 16px;">
+        Farklı kelime temsil tekniklerinin geliştirilmesi, dağılımsal anlambiliminin çok daha popüler bir hale gelmesini sağlamıştır. 
+        Uzun süredir var olmasına rağmen, nöral ağlarla kelime temsil öğrenimi, Mikolov ve arkadaşları <a href="https://arxiv.org/pdf/1301.3781.pdf">[2]</a> 
+        tarafından geliştirilen ve önceki yaklaşımlara göre çok daha hızlı vektör modelleri eğitebilen Word2Vec sayesinde popülerlik kazanmıştır. O zamandan beri, 
+        orijinal Word2Vec mimarisine dayanan birçok model önerilmiştir. Bojanowski ve arkadaşları <a href="https://arxiv.org/pdf/1607.04606.pdf">[3]</a>, 
+        Word2Vec modeli üzerinde çalışarak, kelimeleri karakter N-gramlar olarak temsil eden FastText algoritmasını geliştirmiştir. 
+        Bu değişiklik, kelime dağarcığı dışında kalan kelimelerle başa çıkmak ve Türkçe gibi karmaşık morfolojiye sahip dillerin performansını artırmayı amaçlamaktaydı.
+        Pennington ve arkadaşları <a href="https://aclanthology.org/D14-1162.pdf">[4]</a>, Matris Çarpanlarına Ayırma (Ayrıştırma) ve bağlam pencereleri yöntemlerini birleştirerek
+        GloVe adlı algoritmayı geliştirdi. Ayrıca ilerleyen zamanlarda BERT <a href="https://arxiv.org/pdf/1810.04805.pdf">[5]</a> ve ELMo <a href="https://arxiv.org/pdf/1802.05365.pdf">[6]</a> 
+        gibi bağlamsal kelime temsil modelleri geliştirildi. Bu modeller, kelimeleri içinde bulundukları cümlelere veya söz öbeklerine göre oluşturulan bağlamsal vektörler ile temsil etmektedirler.</p>
+        
+  
+<p style="font-size: 16px;"> Boğaziçi Üniversitesi Bilgisayar Mühendisliği bitirme projemizin bir parçası olarak, eğittiğimiz modellerin farklı sorgular karşısındaki çıktılarını daha kolay bir şekilde gözlemleyebilmek için Turkish WebVectors'ı hazırladık.
+        Sitemizin kaynağı olan <a href="https://github.com/akutuzov/webvectors">WebVectors</a> projesinde de belirtildiği gibi, 
+        <i>WebVectors</i> projesinin esas hedefi, bu heyecan verici alanda çalışmak isteyenlerin giriş eşiğini düşürmektir. Ayrıca, bu proje araştırmacıların yeni kelime temsil modellerini keşfetmelerini ve uygulamalarını kolaylaştırmak için çeşitli özellikler sunmaktadır.</p>
+<h2>Özellikler</h2>
+<p style="font-size: 16px;">Eğitilmiş kelime temsil modelleri için Github repository'mizi ziyaret edebilirsiniz: <a href="https://github.com/Turkish-Word-Embeddings/Word-Embeddings-Repository-for-Turkish">Turkish Word Embeddings repository</a>.</p>
+
+<ol>
+<li style="padding-top: 10px;"><a href="{{ url }}{{lang}}/misc/">Sayısal olarak benzerlik hesaplama</a>: İki kelime arasındaki kosinüs benzerliğini hesapla.</li>
+<li style="padding-top: 10px;"><a href="{{ url }}{{lang}}/associates/">Benzer Kelimeler</a>: Girdiğin kelimeye en benzer 10 sözcüğü bul.</li>
+<li style="padding-top: 10px;"><a href="{{ url }}{{lang}}/calculator/">Anlamsal hesap makinesi</a>: "<strong>A</strong> kelimesi <strong>B</strong> kelimesi ile belli bir açıdan ilişkili ise, <strong>C</strong> kelimesi ile hangi kelime arasında benzer bir ilişki vardır?" şeklindeki sorguları yanıtla.</li>
+<li style="padding-top: 10px;"><a href="{{ url }}{{lang}}/visual/">Görselleştirme</a>: Kelime vektörlerini t-SNE veya PCA algoritmaları kullanarak 2 boyutlu düzlemde görselleştir.</li>
+</ol>
+
+<h2>Diğer</h2>
+<p style="font-size: 16px;">İngilizce vektörler için <a href="http://vectors.nlpl.eu/explore/embeddings/en/">WebVectors</a> web sitesini, Rusça için de <a href="https://rusvectores.org/en/">RusVectōrēs</a> web sitesini ziyaret edebilirsiniz.</p>
+
+<h2>Referans</h2>
+<p style="font-size: 16px;"><i>Türkçe kelime temsil modellerinin detaylı bir şekilde karşılaştırıldığı bir makale üzerinde çalışmaktayız. Uygulamamızı çalışmalarınızda kullandıysanız, şimdilik Github repository'imizi referans verebilirsiniz:</i></p>
+<p style="font-size: 16px;"><i>Sarıtaş, K., Öz, C. A., & Güngör, T. Turkish WebVectors (Version 1.0.0) [Computer software]. <a href="https://github.com/Turkish-Word-Embeddings/Turkish-WebVectors">https://github.com/Turkish-Word-Embeddings/Turkish-WebVectors</a></i></p>
+
+
+<h2>İletişim</h2>
+<ul>
+<li style="padding-top: 10px;"><a href="https://www.linkedin.com/in/cahid-arda/">Cahid Arda Öz</li>
+<li style="padding-top: 10px;"><a href="https://www.linkedin.com/in/karahan-saritas/">Karahan Sarıtaş</a></li>
+</ul>
+      </div>
+      <div class="text-nowrap">
+        <hr>
+        <p style="text-align:right;"><a href="https://www.cmpe.boun.edu.tr/">Boğaziçi Üniversitesi Bilgisayar Mühendisliği</a> &nbsp;
+        <a href="https://www.boun.edu.tr/"><img width="50" src="/data/images/bu-logo.png" title="Boğaziçi University" alt="Boğaziçi University"></a></p>
+      
+      </div>
 {% endblock %}

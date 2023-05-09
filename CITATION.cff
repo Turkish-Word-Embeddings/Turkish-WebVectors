@@ -8,13 +8,13 @@ message: >-
   metadata from this file.
 type: software
 authors:
-  - given-names: Cahid Arda
-    family-names: Öz
-    email: cahid.oz@boun.edu.tr
-    affiliation: Boğaziçi University
   - given-names: Karahan
     family-names: Sarıtaş
     email: karahan.saritas@boun.edu.tr
+    affiliation: Boğaziçi University
+  - given-names: Cahid Arda
+    family-names: Öz
+    email: cahid.oz@boun.edu.tr
     affiliation: Boğaziçi University
   - given-names: Tunga
     family-names: Güngör
