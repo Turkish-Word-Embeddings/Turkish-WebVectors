@@ -25,7 +25,7 @@
 </script>
     <h2>{{strings['synraw2']}} <span style = "font-size:larger;"><strong>
       <a href="{{ url }}{{lang}}/{{ model }}/{{ word }}/"
-      title="{% if tags %}{{strings['synraw15']}} {{ word.split('_')[-1] }}, {% endif %}{{strings['synraw14']}} {{ frequencies[model][word][0]}}"
+      title="{{strings['synraw14']}} {{ frequencies[model][word][0]}}"
       class="frequency-{{frequencies[model][word][1]}}">
       &laquo;{{word.split('_')[0].replace('::', ' ')}}&raquo;</a></strong></span>
       {{strings['synraw5']}} <a href="{{ url }}{{lang}}/models#{{model}}">&laquo;{{ strings[models[model]] }}&raquo;</a>?
@@ -53,7 +53,7 @@
         {%- for res in list_value[model] if res != "Incorrect tag!" %}
         <li class="frequency-item-{{frequencies[model][res[0]][1]}}" data-word="{{res[0]}}">
         <a href="{{ url }}{{lang}}/{{ model }}/{{res[0]}}/"
-        title="{% if tags %}{{strings['synraw15']}} {{ res[0].split('_')[-1] }}, {% endif %}{{strings['synraw14']}} {{ frequencies[model][res[0]][0]}}"
+        title="{{strings['synraw14']}} {{ frequencies[model][res[0]][0]}}"
         class="frequency-{{frequencies[model][res[0]][1]}}">
         {% if tags %}
         {{res[0].split('_')[0].replace('::', ' ')}}
@@ -92,9 +92,6 @@
       <input class="form-control" style="max-width:75px;" type="number" id="topn" min="0" max="10" step="1" value="10">
       <label for="topn" title="{{ strings['graph5'] }}">{{ strings['graph4']}}</label>
       -->
-      <label>
-        <input type="checkbox" id="separator"> {{ strings['graph6'] }}
-      </label>
     </fieldset>
   </div>
 </div>

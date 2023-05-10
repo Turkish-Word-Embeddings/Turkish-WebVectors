@@ -40,7 +40,7 @@
           <td style="vertical-align:top">
             <em>
             <a href="{{ url }}{{lang}}/{{ model }}/{{res[0][0]}}/"
-            title="{% if tags %}{{strings['synraw15']}} {{ res[0][0].split('_')[-1] }}, {% endif %}{{strings['synraw14']}} {{ frequencies[res[0][0]][0]}}"
+            title="{{strings['synraw14']}} {{ frequencies[res[0][0]][0]}}"
             class="frequency-{{frequencies[res[0][0]][1]}}">
             {% if tags %}
             {{res[0][0].split("_")[0].replace('::', ' ')}}
@@ -54,7 +54,7 @@
             </em>
             <em>
             <a href="{{ url }}{{lang}}/{{ model }}/{{res[0][1]}}/"
-            title="{% if tags %}{{strings['synraw15']}} {{ res[0][1].split('_')[-1] }}, {% endif %}{{strings['synraw14']}} {{ frequencies[res[0][1]][0]}}"
+            title="{{strings['synraw14']}} {{ frequencies[res[0][1]][0]}}"
             class="frequency-{{frequencies[res[0][1]][1]}}">
             {% if tags %}
             {{res[0][1].split("_")[0].replace('::', ' ')}}

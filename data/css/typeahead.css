@@ -95,3 +95,8 @@
 #rtl-support .tt-menu {
   text-align: right;
 }
+
+.inactiveLink {
+  pointer-events: none;
+  cursor: default;
+}

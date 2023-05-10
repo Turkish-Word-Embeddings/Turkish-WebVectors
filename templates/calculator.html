@@ -72,7 +72,7 @@
               {% else -%}
               <li class="frequency-item-{{frequencies[model][res[0]][1]}}" data-word="{{res[0]}}">
               <a href="{{ url }}{{lang}}/{{ model }}/{{res[0]}}/"
-              title="{% if tags %}{{strings['synraw15']}} {{ res[0].split('_')[-1] }}, {% endif %}{{strings['synraw14']}} {{ frequencies[model][res[0]][0]}}"
+              title="{{strings['synraw14']}} {{ frequencies[model][res[0]][0]}}"
               class="frequency-{{frequencies[model][res[0]][1]}}">
               {% if tags %}
               {{res[0].split('_')[0].replace('::', ' ')}}
@@ -104,11 +104,13 @@
         </div>
         <hr>
         <!-- "Parts of speech are shown for each word, if present in the model"-->
+        <!--
         <ul>
           <li>
             <p><i>{{strings['similar34']}}</i></p>
           </li>
         </ul>
+        -->
         {% endif -%}
         {% if error -%}
         <p> <span style = "font-size:larger;"><strong>
@@ -190,7 +192,7 @@
             {%- for res in calc_value[model] if res != "No similar words of this part of speech." and not 'No similar words' in res and not 'is unknown' in res %}
             <li class="frequency-item-{{frequencies[model][res[0]][1]}}" data-word="{{res[0]}}">
             <a href="{{ url }}{{lang}}/{{ model }}/{{res[0]}}/"
-            title="{% if tags %}{{strings['synraw15']}} {{ res[0].split('_')[-1] }}, {% endif %}{{strings['synraw14']}} {{ frequencies[model][res[0]][0] }}"
+            title="{{strings['synraw14']}} {{ frequencies[model][res[0]][0] }}"
             class="frequency-{{frequencies[model][res[0]][1]}}">
             {% if tags %}
             {{res[0].split('_')[0].replace('::', ' ')}}
@@ -228,12 +230,14 @@
         {% endfor -%}
       </div>
       <hr>
+      <!--
       <ul>
-        <!-- <li><p><i>{{strings['base18']}}</i></p></li> -->
+        <li><p><i>{{strings['base18']}}</i></p></li> 
         <li>
           <p><i>{{strings['similar34']}}</i></p>
         </li>
       </ul>
+      -->
       {% endif -%}
       <!-- In case of the error -->
       {% if calc_error -%}

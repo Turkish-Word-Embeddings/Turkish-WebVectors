@@ -113,7 +113,7 @@ exposed_tag_file = config.get("Tags", "exposed_tags_list")
 exposed_tags = {}
 
 if tags:
-    with open(root + exposed_tag_file, "r") as csvfile:
+    with open(root + exposed_tag_file, "r", encoding="utf-8") as csvfile:
         reader = csv.DictReader(csvfile, delimiter="\t")
         for row in reader:
             exposed_tags[row["tag"]] = row["string"]
@@ -122,7 +122,7 @@ if tags:
 
 our_models = {}
 model_props = {}
-with open(modelsfile, "r") as csvfile:
+with open(modelsfile, "r", encoding="utf-8") as csvfile:
     reader = csv.DictReader(csvfile, delimiter="\t")
     for row in reader:
         our_models[row["identifier"]] = row["string"]
@@ -136,7 +136,7 @@ with open(modelsfile, "r") as csvfile:
 
 contextual_models = {}
 contextual_model_props = {}
-with open(contextual_modelsfile, "r") as csvfile:
+with open(contextual_modelsfile, "r", encoding="utf-8") as csvfile:
     reader = csv.DictReader(csvfile, delimiter="\t")
     for row in reader:
         contextual_models[row["identifier"]] = row["string"]
@@ -194,7 +194,7 @@ def process_query(userquery, language="english"):
 
 def get_images(images):
     imagecache = {}
-    imagedata = open(root + cachefile, "r")
+    imagedata = open(root + cachefile, "r", encoding="utf-8")
     for LINE in imagedata:
         result = LINE.strip().split("\t")
         if len(result) == 2:
@@ -250,7 +250,7 @@ def word2vec2tensor(alias, vectorlist, wordlist, classes):
         content=json.dumps(datadic),
     )
     link2config = c["files"][alias + "_config.json"]["raw_url"]
-    outputfile = open(root + "data/images/tsneplots/" + alias + ".url", "w")
+    outputfile = open(root + "data/images/tsneplots/" + alias + ".url", "w", encoding="utf-8")
     outputfile.write(link2config)
     outputfile.close()
     return link2config

@@ -122,7 +122,6 @@ with open(root + config.get("Files and directories", "models"), "r") as csvfile:
         our_models[row["identifier"]]["corpus_size"] = int(row["size"])
         if row["default"] == "True":
             defaultmodel = row["identifier"]
-
 models_dic = {}
 
 for m in our_models:
@@ -135,7 +134,7 @@ for m in our_models:
             models_dic[m] = gensim.models.KeyedVectors.load_word2vec_format(
                 modelfile, binary=True
             )
-            our_models[m]["vocabulary"] = False
+            # our_models[m]["vocabulary"] = False
         elif (
                 modelfile.endswith(".vec.gz")
                 or modelfile.endswith(".txt.gz")
@@ -143,9 +142,9 @@ for m in our_models:
                 or modelfile.endswith(".txt")
         ):
             models_dic[m] = gensim.models.KeyedVectors.load_word2vec_format(
-                modelfile, binary=False
+                modelfile, binary=False, no_header=True
             )
-            our_models[m]["vocabulary"] = False
+            # our_models[m]["vocabulary"] = False
         else:
             models_dic[m] = gensim.models.KeyedVectors.load(modelfile)
     models_dic[m].init_sims(replace=True)
@@ -216,13 +215,14 @@ def frequency(word, model, external=None):
         if not our_models[model]["vocabulary"]:
             return 0, "mid"
         wordfreq = models_dic[model].get_vecattr(word, "count")
+    
     relative = wordfreq / corpus_size
     tier = "mid"
-    if relative > 0.00001:
+    if relative > 0.001:
         tier = "high"
-    elif relative < 0.0000005:
+    elif relative < 0.00005:
         tier = "low"
-    return wordfreq, tier
+    return int(wordfreq), tier
 
 
 # Vector functions

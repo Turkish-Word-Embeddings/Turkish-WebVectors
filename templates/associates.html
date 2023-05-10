@@ -1,3 +1,4 @@
+
 <!-- This template extends the base.html template. -->
 {%- extends "base.html" -%}
 <!-- The "block title" tag changes the title in the browser tab and the header on the page. -->
@@ -67,8 +68,7 @@
         {{strings['similar16']}}
         <!-- When the cursor hovers over the word we can see pos and frequency (title).
           The word's color depends on its frequency.-->
-        <a href="{{ url }}{{lang}}/{{ usermodels[0] }}/{{word}}"
-        title="{{strings['synraw15']}} {{ word.split('_')[-1] }}, {{strings['synraw14']}} {{ frequencies[usermodels[0]][word][0]}}"
+        <a class="inactiveLink" title="{{strings['synraw14']}} {{frequencies[usermodels[0]][word][0]}}" 
         class="frequency-{{frequencies[usermodels[0]][word][1]}}">
         <i>{{ word.split('_')[0].replace('::', ' ') }}</i></a>
       </strong>
@@ -113,28 +113,19 @@
         <ol style="font-size: larger;" type="1" id="{{model}}">
           {%- for res in list_value[model] if res != "Incorrect tag!" %}
           <li data-word="{{res[0]}}" class="frequency-item-{{frequencies[model][res[0]][1]}}">
-          <a href="{{ url }}{{lang}}/{{ model }}/{{res[0]}}/"
-          title="{% if tags %}{{strings['synraw15']}} {{ res[0].split('_')[-1] }}, {% endif%}{{strings['synraw14']}} {{ frequencies[model][res[0]][0]}}"
+          <a class="inactiveLink" title="{{strings['synraw14']}} {{frequencies[model][res[0]][0]}}"
           class="frequency-{{frequencies[model][res[0]][1]}}">
           {% if tags %}
           {{res[0].split('_')[0].replace('::', ' ')}}
-          {% if res[0].split('_')|length > 1 -%}
-          <sub style="font-size:50%;">{{res[0].split('_')[-1]}}</sub>
+          {% if res[0].split('_')|length > 1 -%}<sub style="font-size:50%;">{{res[0].split('_')[-1]}}</sub>
           {% endif %}
           {% else %}
-          {{res[0].replace('::', ' ')}}
+          {{res[0].replace('::', '')}}</a>
           {% endif %}
-          </a>
-          {{ "{:.2f} ".format(res[1]) }}
-          <!--
+          {{"{:.2f}".format(res[1]) }}
           {% if wordimages[res[0].split('_')[0]] -%}
-          <div class="avataricon">
-            <a href="https://tr.wikipedia.org/wiki/{{ res[0].split('_')[0] }}" target="_blank">
-            <img src = "{{ wordimages[res[0].split('_')[0]] }}" alt = "{{res[0].split('_')[0]|capitalize }} {{strings['synraw11']}}"
-              title = "{{ res[0].split('_')[0]|capitalize }} {{strings['synraw11']}}" width="30">
-            </a>
-          </div>
-        -->
+          
+        
           {% endif -%}
           </li>
           {%- endfor -%}
@@ -143,14 +134,18 @@
       </div>
       {% endfor -%}
     </div>
+    
     <!-- The section for the actual results is over. -->
     <hr>
     <!-- "Parts of speech are shown for each word, if present in the model."  -->
+    <!--
     <ul>
       <li>
         <p><i>{{strings['similar34']}}</i></p>
       </li>
     </ul>
+  -->
+  
     {% endif -%}
     <!-- End of featuring results -->
     {% if error -%}

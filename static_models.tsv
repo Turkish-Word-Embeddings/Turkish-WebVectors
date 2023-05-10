@@ -1,3 +1,4 @@
 identifier	name	path	string	default	tags	algo	size	lang
-word2vec_skipgram_300	 Word2Vec Skipgram	C:/Users/karab/Desktop/Models/word2vec_10ep-300emb.bin	similar37	True	False	word2vec	250000000	turkish
-fasttext_skipgram_300	FastText Skipgram	C:/Users/karab/Desktop/Models/fasttext-10ep-300emb.bin	similar38	False	False	fastText	250000000	turkish
+word2vec_skipgram_300	Word2Vec Skipgram	C:/Users/karab/Desktop/Models/word2vec_10ep-300emb.bin	similar37	True	False	word2vec	1384961747	turkish
+fasttext_skipgram_300	FastText Skipgram	C:/Users/karab/Desktop/Models/fasttext-10ep-300emb.bin	similar38	False	False	fastText	1384961747	turkish
+glove	Turkish GloVe	C:/Users/karab/Desktop/Models/glove.txt	similar39	False	False	GloVe	1384961747	turkish
