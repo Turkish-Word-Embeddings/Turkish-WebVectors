@@ -72,6 +72,7 @@
               {% else -%}
               <li class="frequency-item-{{frequencies[model][res[0]][1]}}" data-word="{{res[0]}}">
               <a href="{{ url }}{{lang}}/{{ model }}/{{res[0]}}/"
+              class="inactiveLink"
               title="{{strings['synraw14']}} {{ frequencies[model][res[0]][0]}}"
               class="frequency-{{frequencies[model][res[0]][1]}}">
               {% if tags %}
@@ -192,6 +193,7 @@
             {%- for res in calc_value[model] if res != "No similar words of this part of speech." and not 'No similar words' in res and not 'is unknown' in res %}
             <li class="frequency-item-{{frequencies[model][res[0]][1]}}" data-word="{{res[0]}}">
             <a href="{{ url }}{{lang}}/{{ model }}/{{res[0]}}/"
+            class="inactiveLink"
             title="{{strings['synraw14']}} {{ frequencies[model][res[0]][0] }}"
             class="frequency-{{frequencies[model][res[0]][1]}}">
             {% if tags %}
