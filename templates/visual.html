@@ -56,7 +56,7 @@
 <h3>{{strings['visual3']}}<sup>*</sup></h3>
 {% endif %}
 {% for word in qwords %}
-<a href="{{ url }}{{lang}}/{{ visual|list|first }}/{{word}}/"
+<a class="inactiveLink"  href="{{ url }}{{lang}}/{{ visual|list|first }}/{{word}}/"
 {% if word in frequencies[visual|list|first] %}
 title="{{strings['synraw14']}} {{ frequencies[visual|list|first][word][0]}}" {% if frequencies[visual|list|first][word][1] == 'high'%} style="color: green;"  {% elif frequencies[visual|list|first][word][1] == 'low' %} style="color: red;"  {% endif %}
 {% endif %}
