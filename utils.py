@@ -1,2 +1,2 @@
-CONFIG = "C:/Users/karab/Desktop/webvectors/webvectors.cfg"
-DATA = "/C:/Users/karab/Desktop/webvectors/data/"
+CONFIG = "webvectors.cfg"
+DATA = "/home/karahansaritas/Turkish-Webvectors/data/"
