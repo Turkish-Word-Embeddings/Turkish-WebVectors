@@ -1,3 +1,3 @@
 identifier	name	path	string	default	tags	algo	size	lang
-word2vec_skipgram_300	Word2Vec Skipgram	/home/karahansaritas/Turkish-WebVectors/models/word2vec-skipgram.bin	similar37	True	False	word2vec	1384961747	turkish
-fasttext_skipgram_300	FastText Skipgram	/home/karahansaritas/Turkish-WebVectors/models/fasttext-skipgram.bin	similar38	False	False	fastText	1384961747	turkish
+word2vec_skipgram_300	Word2Vec Skipgram	models/word2vec-skipgram.bin	similar37	True	False	word2vec	1384961747	turkish
+fasttext_skipgram_300	FastText Skipgram	models/fasttext-skipgram.bin	similar38	False	False	fastText	1384961747	turkish
