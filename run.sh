@@ -1,0 +1,1 @@
+/home/karahansaritas/Turkish-WebVectors/env/bin/gunicorn  run_syn:app_syn -b 0.0.0.0:8000

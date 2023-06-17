@@ -45,7 +45,7 @@ calc31,Относится&nbsp;к,Relates&nbsp;to,ilgili
 calc32,"Вы&nbsp;также можете попробовать более сложные операции над векторами, чем простое решение пропорции.","If&nbsp;you feel confident with algebraic operations on&nbsp;vectors, you can try something more sophisticated than simple analogical inference.","Vektörler üzerinde cebirsel işlemler uygulayarak basit benzetimsel çıkarımlardan daha karmaşık ilişkiler elde edebilirsin."
 calc33,mother,adam,adam
 calc34,daughter,kral,kral
-calc35,father,kadın,kadın
+calc35,father,kadın,kadın"similar38"
 description1,"РусВекторес: дистрибутивная семантика для русского языка, веб-интерфейс и модели для скачивания","WebVectors: word embeddings, web interface and models to download","WebVectors-TR: kelime temsilleri, web arayüzü ve Türkçe modeller"
 home0,"сервис, в котором вы можете исследовать семантические отношения между словами при помощи дистрибутивных моделей.","Tool to explore semantic relations between Turkish words in distributional models.","Türkçe kelimeler arasındaki anlamsal ilişkileri keşfedin!"
 home1,WebVectors: семантические модели для русского языка,Turkish WebVectors: Word Embeddings Online,Turkish WebVectors: Çevrimiçi Kelime Temsilleri

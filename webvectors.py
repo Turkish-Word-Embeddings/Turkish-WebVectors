@@ -18,6 +18,117 @@ from plotting import embed
 from plotting import singularplot
 from sparql import getdbpediaimage
 
+from flask_api import status
+from flask import jsonify, make_response
+
+def render_template(*args, **kwargs):
+    for k,v in kwargs.items():
+        print("{} = {}".format(k, v))
+    
+    if "error" in kwargs.keys():
+        return Response(kwargs["error"], status=status.HTTP_400_BAD_REQUEST)
+
+    def transform_similarity_response(**kwargs):
+        response = {}
+        response['query_word'] = kwargs['word']
+        response['model'] = kwargs['model']
+
+        model = response['model']
+        words = []
+        for i in range(len(kwargs['list_value'][model])):
+            w = kwargs['list_value'][model][i][0]
+            info = {}
+            info['word'] = w
+            info['freq'] = kwargs['frequencies'][model][w][0]
+            info['freq_level'] = kwargs['frequencies'][model][w][1]
+            info['cos_sim'] = kwargs['list_value'][model][i][1]
+            words.append(info)
+        
+        response['words'] = words
+
+        return response
+
+    page = args[0]
+    response = {}
+    if page == "home.html":
+        # TODO: Check if we can return the image
+        # returns more than 10 words, let the front end decide
+        response = {}
+        response['models'] = []
+        response['models'].append(transform_similarity_response(**kwargs))
+        return make_response(jsonify(response), status.HTTP_200_OK)
+    elif page == "associates.html":
+        # returns more than 10 words for each model, let the frontend filter them
+        models = kwargs['usermodels']
+        response = {}
+        response['models'] = []
+        for model in models:
+            list_value = {model: kwargs['list_value'][model]}
+            frequencies = {model: kwargs['frequencies'][model]}
+
+            resp = transform_similarity_response(model = model,
+                                                     word = kwargs['word'],
+                                                     list_value = list_value,
+                                                     frequencies = frequencies)
+            response['models'].append(resp)
+        return make_response(jsonify(response), status.HTTP_200_OK)
+    elif page == "visual.html":
+        models = kwargs['usermodels']
+        response = {}
+        response['models'] = []
+
+        for model in kwargs['frequencies']:
+            model_dict = {}
+            model_dict['model'] = model
+            model_dict['words'] = []
+            for word in kwargs['frequencies'][model]:
+                info = {}
+                info['word'] = word
+                info['freq'] = kwargs['frequencies'][model][word][0]
+                info['freq_level'] = kwargs['frequencies'][model][word][1]
+                model_dict['words'].append(info)
+            
+            model_dict['visual'] = kwargs['visual'][model]
+            response['models'].append(model_dict)
+        
+        response['qwords'] = kwargs['qwords']
+        response['viz_method'] = kwargs['viz_method']
+        return response
+
+    elif page == "calculator.html":
+        # returns more than 10 words for each model, let the frontend filter them
+        models = kwargs['usermodels']
+
+        response = {}
+        response['models'] = []
+        for model in models:
+            analogy_value = {model: kwargs['analogy_value'][model]}
+            frequencies = {model: kwargs['frequencies'][model]}
+
+            resp = transform_similarity_response(model = model,
+                                                     word = None,
+                                                     list_value = analogy_value,
+                                                     frequencies = frequencies)
+            resp.pop('query_word')
+            response['models'].append(resp)
+        response['positive_list'] = kwargs['plist']
+        response['negative_list'] = kwargs['nlist']
+        return make_response(jsonify(response), status.HTTP_200_OK)
+    elif page == "similar.html":
+        response = {
+            'models': [
+                {'model': kwargs['usermodels'][0],
+                 'values': []}
+            ],
+        }
+
+        for query, sim in kwargs['value']:
+            d = {'query': query, 'sim': sim}
+            response['models'][0]['values'].append(d)
+        return make_response(jsonify(response), status.HTTP_200_OK)
+    else:
+        return Response("Unknown request", status=status.HTTP_400_BAD_REQUEST)
+
 # import strings data from respective module
 from strings_reader import language_dicts
 
@@ -174,6 +285,7 @@ def per_request_callbacks(response):
 def process_query(userquery, language="english"):
     userquery = userquery.strip()
     query = userquery
+
     if tags:
         if "_" in userquery:
             query_split = userquery.split("_")
@@ -265,7 +377,6 @@ def home(lang):
     s.add(lang)
     other_lang = list(set(language_dicts.keys()) - s)[0]  # works only for two languages
     g.strings = language_dicts[lang]
-
     if request.method == "POST":
         list_data = request.form["list_query"]
         if (
@@ -284,13 +395,15 @@ def home(lang):
             query = process_query(list_data, language=language)
             if query == "Incorrect tag!":
                 error_value = "Incorrect tag!"
+                
                 return render_template(
                     "home.html",
                     error=error_value,
                     other_lang=other_lang,
                     languages=languages,
                     url=url, vocab=default_vocab
-                )
+                ) 
+
             images = {query.split("_")[0]: None}
             models_row = {}
             frequencies = {}
@@ -415,7 +528,7 @@ def misc_page(lang):
                                 error_value = "Incorrect tag!"
                                 return render_template(
                                     "similar.html",
-                                    error_sim=error_value,
+                                    error=error_value,
                                     models=our_models,
                                     other_lang=other_lang,
                                     languages=languages,
@@ -433,7 +546,7 @@ def misc_page(lang):
                     error_value = "Incorrect query!"
                     return render_template(
                         "similar.html",
-                        error_sim=error_value,
+                        error=error_value,
                         other_lang=other_lang,
                         languages=languages,
                         url=url,
@@ -446,7 +559,7 @@ def misc_page(lang):
                 if "Unknown to the model" in result:
                     return render_template(
                         "similar.html",
-                        error_sim=result["Unknown to the model"],
+                        error=result["Unknown to the model"],
                         other_lang=other_lang,
                         languages=languages,
                         models=our_models,
@@ -480,7 +593,7 @@ def misc_page(lang):
                 error_value = "Incorrect query!"
                 return render_template(
                     "similar.html",
-                    error_sim=error_value,
+                    error=error_value,
                     models=our_models,
                     tags=tags,
                     tags2show=exposed_tags,
@@ -1028,7 +1141,7 @@ def finder(lang):
                 error_value = "Incorrect query!"
                 return render_template(
                     "calculator.html",
-                    calc_error=error_value,
+                    error=error_value,
                     other_lang=other_lang,
                     tags2show=exposed_tags,
                     languages=languages,
@@ -1040,7 +1153,7 @@ def finder(lang):
                 error_value = "Incorrect tag!"
                 return render_template(
                     "calculator.html",
-                    calc_error=error_value,
+                    error=error_value,
                     other_lang=other_lang,
                     tags2show=exposed_tags,
                     languages=languages,
@@ -1109,11 +1222,11 @@ def finder(lang):
                     images = get_images(images)
             return render_template(
                 "calculator.html",
-                calc_value=models_row,
+                analogy_value=models_row,
                 pos=pos,
-                plist2=positive_list,
+                plist=positive_list,
                 tags2show=exposed_tags,
-                nlist2=negative_list,
+                nlist=negative_list,
                 wordimages=images,
                 models=our_models,
                 tags=tags,
@@ -1545,7 +1658,7 @@ def similarity_api(model, wordpair):
     sim = result["similarities"][-1][-1]
     return str(sim) + "\t" + cleanword0 + "\t" + cleanword1 + "\t" + model
 
-
+"""
 @wvectors.route(url + "<lang:lang>/models/")
 def models_page(lang):
     g.lang = lang
@@ -1556,7 +1669,7 @@ def models_page(lang):
     return render_template(
         "%s/models.html" % lang, other_lang=other_lang, languages=languages, url=url
     )
-
+"""
 
 @wvectors.route(url + "<lang:lang>/about/")
 def about_page(lang):
@@ -1569,6 +1682,15 @@ def about_page(lang):
     return render_template(
         "%s/about.html" % lang, other_lang=other_lang, languages=languages, url=url
     )
+
+# redirecting requests with no lang:
+@wvectors.route(url + "<lang:lang>/models/", methods=["GET"])
+def get_models(lang):
+    response = {
+        'models': list(our_models.keys())
+    }
+    return make_response(jsonify(response), status.HTTP_200_OK)
+
 
 
 # redirecting requests with no lang:
