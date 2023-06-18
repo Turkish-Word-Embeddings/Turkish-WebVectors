@@ -6,5 +6,7 @@ RUN apt-get update && apt-get install -y wget
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 
+EXPOSE 8000
+
 COPY . .
-CMD ["sleep","3600"]
+CMD	["gunicorn", "run_syn:app_syn", "--bind", "0.0.0.0:8000"]
