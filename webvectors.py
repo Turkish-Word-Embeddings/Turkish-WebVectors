@@ -372,13 +372,15 @@ def word2vec2tensor(alias, vectorlist, wordlist, classes):
 def home(lang):
     # pass all required variables to template
     # repeated within each @wvectors.route function
+    print(lang)
     g.lang = lang
     s = set()
     s.add(lang)
     other_lang = list(set(language_dicts.keys()) - s)[0]  # works only for two languages
     g.strings = language_dicts[lang]
     if request.method == "POST":
-        list_data = request.form["list_query"]
+        list_data = request.json['list_query']
+        # list_data = request.form["list_query"]
         if (
                 list_data.replace("_", "")
                         .replace("-", "")
@@ -483,7 +485,7 @@ def misc_page(lang):
     g.strings = language_dicts[lang]
 
     if request.method == "POST":
-        input_data = request.form["query"]
+        input_data = request.json["query"]
 
         # Similarity queries
         if input_data != "dummy":
@@ -492,12 +494,12 @@ def misc_page(lang):
                 if input_data.endswith(","):
                     input_data = input_data[:-1]
                 cleared_data = []
-                sim_history = request.form["sim_history"]
+                sim_history = request.json["sim_history"]
                 if not sim_history.strip():
                     sim_history = []
                 else:
                     sim_history = json.loads(sim_history)
-                model_value = request.form.getlist("simmodel")
+                model_value = request.json["simmodel"]
                 if len(model_value) < 1:
                     model = defaultmodel
                 else:
@@ -623,7 +625,7 @@ def associates_page(lang):
     other_lang = list(set(language_dicts.keys()) - s)[0]  # works only for two languages
     g.strings = language_dicts[lang]
     if request.method == "POST":
-        list_data = request.form["list_query"]
+        list_data = request.json["list_query"]
 
         # Nearest associates queries
         if (
@@ -634,7 +636,7 @@ def associates_page(lang):
                 .replace(" ", "")
                 .isalnum()
         ):
-            model_value = request.form.getlist("model")
+            model_value = request.json["model"]
             if len(model_value) < 1:
                 model_value = [defaultmodel]
             model_langs = set([model_props[el]["lang"] for el in model_value])
@@ -660,7 +662,7 @@ def associates_page(lang):
                 )
             userpos = []
             if tags:
-                pos_value = request.form.getlist("pos")
+                pos_value = request.json["pos"]
                 if len(pos_value) < 1:
                     pos = query.split("_")[-1]
                 else:
@@ -773,10 +775,10 @@ def visual_page(lang):
     g.strings = language_dicts[lang]
 
     if request.method == "POST":
-        list_data = request.form.getlist("list_query")
-        viz_method = request.form.getlist("viz_method")[0]
+        list_data = request.json["list_query"]
+        viz_method = request.json["viz_method"][0]
         if list_data:
-            model_value = request.form.getlist("model")
+            model_value = request.json["model"]
             if len(model_value) < 1:
                 model_value = [defaultmodel]
             language = model_props[defaultmodel]["lang"]
@@ -973,19 +975,19 @@ def finder(lang):
         positive1_data = ""
         negative1_data = ""
         try:
-            positive_data = request.form["positive"]
-            positive2_data = request.form["positive2"]
-            negative_data = request.form["negative"]
+            positive_data = request.json["positive"]
+            positive2_data = request.json["positive2"]
+            negative_data = request.json["negative"]
         except:
             pass
         try:
-            positive1_data = request.form["positive1"]
-            negative1_data = request.form["negative1"]
+            positive1_data = request.json["positive1"]
+            negative1_data = request.json["negative1"]
         except:
             pass
         # Analogical inference
         if negative_data != "" and positive_data != "" and positive2_data != "":
-            calcmodel_value = request.form.getlist("calcmodel")
+            calcmodel_value = request.json.getlist("calcmodel")
             if len(calcmodel_value) < 1:
                 calcmodel_value = [defaultmodel]
             language = model_props[defaultmodel]["lang"]
@@ -1040,7 +1042,7 @@ def finder(lang):
                 )
             userpos = []
             if tags:
-                calcpos_value = request.form.getlist("pos")
+                calcpos_value = request.json["pos"]
                 if len(calcpos_value) < 1:
                     pos = defaulttag
                 else:
@@ -1118,7 +1120,7 @@ def finder(lang):
 
         # Calculator
         if positive1_data != "":
-            calcmodel_value = request.form.getlist("calcmodel")
+            calcmodel_value = request.json["calcmodel"]
             if len(calcmodel_value) < 1:
                 calcmodel_value = [defaultmodel]
             language = model_props[defaultmodel]["lang"]
@@ -1163,7 +1165,7 @@ def finder(lang):
                 )
             userpos = []
             if tags:
-                calcpos_value = request.form.getlist("calcpos")
+                calcpos_value = request.json["calcpos"]
                 if len(calcpos_value) < 1:
                     pos = defaulttag
                 else:
